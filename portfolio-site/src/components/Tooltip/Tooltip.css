@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.tooltip-container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tooltip{
+    font-family: "Roboto", sans-serif; 
+    width: 70px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #d8e2e2;
+    padding: 6px;
+    position: absolute;
+    top: -35px;
+    margin-left: -22px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+/* .arrow{
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    position: absolute;
+    bottom: -12px;
+    left: calc(50% - 12px);
+} */
+
+.tooltip.open {
+    transform: translateY(-10px);
+    opacity: 1;    
+}
