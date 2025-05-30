@@ -16,13 +16,15 @@ function App() {
   const [showGitTooltip, setShowGitTooltip] = useState(false);
   const [showLinkdinTooltip, setShowLinkdinTooltip] = useState(false);
   const [showMailTooltip, setShowMailTooltip] = useState(false);
-  const [showCVTooltip, setShowCVTooltip] =useState(false);
+  const [showCVTooltip, setShowCVTooltip] = useState(false);
+
+  const [selected, setSelected] = useState("experience");
 
   return (
     <>
       <div className="flex-col background h-screen">
         <div className="h-1/12"></div>
-        <nav className="">
+        <nav className="navbar">
           <ul
             className="flex justify-between justify-self-center w-60
           bg-gradient-to-r from-purple-500/30 via-red-500/30 to-yellow-500/30 
@@ -162,7 +164,7 @@ function App() {
               <h1 className="font-roboto font-light opacity-40">
                 Let's Connect ...
               </h1>
-              <ul className="flex gap-3 mt-2">
+              <ul className="flex gap-3 mt-2 connect-keys">
                 <div className="rotate-x-30 gitHubBut">
                   <AnimatePresence>
                     {showGitTooltip && (
@@ -214,10 +216,8 @@ function App() {
                     border-b-2 border-zinc-700 bg-zinc-600 transition-all 
                     duration-150 [box-shadow:0_10px_0_0_#414145] active:translate-y-2
                     active:border-b-0 active:[box-shadow:0_0px_0_0_#414145, 0_0px_0_0_#38383d]"
-                  
-                    onMouseEnter={()=>setShowLinkdinTooltip(true)}
-                    onMouseLeave={()=>setShowLinkdinTooltip(false)}
-                  
+                    onMouseEnter={() => setShowLinkdinTooltip(true)}
+                    onMouseLeave={() => setShowLinkdinTooltip(false)}
                   >
                     <span
                       className="flex h-full flex-col items-center justify-center
@@ -228,7 +228,7 @@ function App() {
                   </li>
                 </div>
                 <div className="rotate-x-30 mailBut">
-                <AnimatePresence>
+                  <AnimatePresence>
                     {showMailTooltip && (
                       <motion.p
                         initial={{ opacity: 0 }}
@@ -247,7 +247,6 @@ function App() {
                     border-b-2 border-zinc-700 bg-zinc-600 transition-all 
                     duration-150 [box-shadow:0_10px_0_0_#414145] active:translate-y-2
                     active:border-b-0 active:[box-shadow:0_0px_0_0_#414145, 0_0px_0_0_#38383d]"
-                  
                     onMouseEnter={() => setShowMailTooltip(true)}
                     onMouseLeave={() => setShowMailTooltip(false)}
                   >
@@ -260,7 +259,7 @@ function App() {
                   </li>
                 </div>
                 <div className="rotate-x-30 cvBut">
-                <AnimatePresence>
+                  <AnimatePresence>
                     {showCVTooltip && (
                       <motion.p
                         initial={{ opacity: 0 }}
@@ -279,10 +278,8 @@ function App() {
                     border-b-2 border-zinc-700 bg-zinc-600 transition-all 
                     duration-150 [box-shadow:0_10px_0_0_#414145] active:translate-y-2
                     active:border-b-0 active:[box-shadow:0_0px_0_0_#414145, 0_0px_0_0_#38383d]"
-                  
-                    onMouseEnter={()=>setShowCVTooltip(true)}
-                    onMouseLeave={()=>setShowCVTooltip(false)}
-                  
+                    onMouseEnter={() => setShowCVTooltip(true)}
+                    onMouseLeave={() => setShowCVTooltip(false)}
                   >
                     <span
                       className="flex h-full flex-col items-center justify-center
@@ -293,6 +290,42 @@ function App() {
                   </li>
                 </div>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="h-1/6"></div>
+        <div className="text-white font-roboto flex justify-center h-200 bg-black">
+          <div
+            className="h-15/16 w-3/4 flex justify-center shadow-[0_0_50px_10px_rgba(59,59,59,0.75)]
+          rounded-[3rem] bg-neutral-950"
+          >
+            <div className="relative flex w-fit items-center bg-black h-fit mt-2 rounded-full">
+              <div
+                className="px-3 py-2 rounded-full z-10 relative"
+                onClick={() => setSelected("experience")}
+              >
+                <button>Experience</button>
+              </div>
+              <div
+                className="px-3 py-2 rounded-full z-10 relative"
+                onClick={() => setSelected("education")}
+              >
+                <button>Education</button>
+              </div>
+
+              <div
+                className={`absolute inset-0 z-0 flex ${
+                  selected === "experience" ? "justify-start" : "justify-end"
+                }`}>
+                <motion.span
+                layout
+                transition={{ type: "spring", damping:15, stiffness:300 }}
+                className="h-full w-1/2 rounded-full bg-gray-500">
+                  
+                </motion.span>
+              </div>
+
+
             </div>
           </div>
         </div>
