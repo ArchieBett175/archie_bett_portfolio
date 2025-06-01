@@ -341,9 +341,9 @@ function App() {
                   : "opacity-0 absolute top-0 -z-10"
               }`}
             >
-              <div className="w-1 h-1/10 border-2 border-neutral-500 rounded-full ml-9.5"></div>
+              <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5"></div>
 
-              <div className="flex w-full">
+              <div className="flex w-full h-1/10">
                 <div className="size-20 absolute -mt-1">
                   <img src={ocadoLogo} alt="logo from Ocado "></img>
                 </div>
@@ -364,9 +364,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 -mt-14"></div>
+              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
 
-              <div className="flex w-full">
+              <div className="flex w-full h-1/10">
                 <div className="size-20 bg-white rounded-full flex justify-center absolute -mt-1">
                   <img
                     src={asdaLogo}
@@ -390,9 +390,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 -mt-9"></div>
+              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
 
-              <div className="flex w-full">
+              <div className="flex w-full h-1/10">
                 <div className="size-20  bg-[#272a2b] rounded-full flex justify-center absolute -mt-1">
                   <img
                     src={welcomeBreakLogo}
@@ -418,7 +418,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5 -mt-14"></div>
+              <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
             </div>
             {/* Code for education part of expierience */}
             <div
@@ -428,9 +428,9 @@ function App() {
                   : "opacity-0 absolute top-0 -z-10"
               }`}
             >
-              <div className="w-1 h-1/10 border-2 border-neutral-500 rounded-full ml-9.5"></div>
+              <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5"></div>
 
-              <div className="flex w-full">
+              <div className="flex w-full h-1/10">
                 <div className="size-20 absolute -mt-1 bg-white rounded-full flex justify-center items-center">
                   <img
                     src={yorkLogo}
@@ -453,9 +453,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 -mt-9"></div>
+              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5"></div>
 
-              <div className="flex w-full">
+              <div className="flex w-full h-1/10">
                 <div className="size-20 bg-white rounded-full flex justify-center items-center absolute -mt-1">
                   <img
                     src={chancellorsLogo}
@@ -475,9 +475,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 mt-1"></div>
+              <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
 
-              <div className="flex w-full">
+              <div className="flex w-full h-1/10">
                 <div className="size-20  bg-white rounded-full flex justify-center items-center absolute -mt-1">
                   <img
                     src={chancellorsLogo}
@@ -498,9 +498,65 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5 -mt-4"></div>
+              <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
             </div>
-            <div className="w-full h-1 bg-neutral-500 -mt-2"></div>
+            <div className="w-full h-1 bg-neutral-500 -mt-3"></div>
+          </div>
+        </div>
+        {/* Div for Bento Grid */}
+        <div className="h-screen w-full flex items-center justify-center bg-black">
+          <div
+            className=" w-[1164px] auto-rows-[minmax(0,1fr)]
+              grid-cols-10 gap-3 p-10
+              flex-col 
+              max-lg:grid-cols-8
+              md:grid max-md:flex max-md:gap-4 aspect-12/10
+              "
+          >
+            <div
+              className="col-start-1 col-end-4 row-start-1 row-end-4 bg-red-500 
+            rounded-3xl aspect-square"
+            ></div>
+            <div
+              className="col-start-1 col-end-4 row-start-4 row-end-5
+            rounded-3xl grid grid-cols-3 gap-3 "
+            >
+              <div className="col-span-1 bg-blue-400 rounded-3xl aspect-square"></div>
+              <div className="col-span-1 bg-blue-500 rounded-3xl aspect-square"></div>
+              <div className="col-span-1 bg-blue-600 rounded-3xl aspect-square"></div>
+            </div>
+            <div
+              className="col-start-6 col-end-11 row-start-1 row-end-4 bg-amber-700 
+            rounded-3xl max-lg:col-start-4 max-lg:col-end-9 aspect-12/7"
+            ></div>
+            <div
+              className="col-start-6 col-end-11 row-start-4 row-end-5 bg-stone-700 
+            rounded-3xl max-lg:col-start-4 max-lg:col-end-9 aspect-22/4"
+            ></div>
+            <div
+              className="col-start-4 col-end-6 row-start-1 row-end-3 bg-purple-600 
+            rounded-3xl max-lg:col-start-1 max-lg:col-end-5 max-lg:row-start-5 
+            max-lg:row-end-7 lg:aspect-square aspect-19/9"
+            ></div>
+            <div
+              className="col-start-4 col-end-6 row-start-3 row-end-5 bg-slate-700
+            rounded-3xl max-lg:col-start-5 max-lg:col-end-9 max-lg:row-start-8 
+            max-lg:row-end-10 lg:aspect-square aspect-19/9"
+            ></div>
+            <div
+              className="col-start-1 col-end-6 row-start-5 row-end-8 bg-green-500 
+            rounded-3xl max-lg:col-end-5 max-lg:row-start-7 max-lg:row-end-10
+            aspect-19/11
+            "
+            ></div>
+            <div
+              className="col-start-6 col-end-11 row-start-5 row-end-8 bg-pink-700 
+            rounded-3xl max-lg:col-start-5 max-lg:col-end-9 aspect-19/11"
+            ></div>
+            <div
+              className="col-start-1 col-end-11 row-start-8 row-end-9 bg-cyan-700 
+            rounded-3xl max-lg:col-end-9 max-lg:row-start-10 max-lg:row-end-11 aspect-45/4"
+            ></div>
           </div>
         </div>
       </div>
