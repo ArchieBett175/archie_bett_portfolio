@@ -517,7 +517,15 @@ function App() {
             <div
               className="col-start-1 col-end-4 row-start-1 row-end-4 bg-red-500 
             rounded-xl max-md:h-125 max-sm:h-75"
-            ></div>
+            >
+              <div className="flex h-full w-full flex-col">
+                <div>
+                  <button>
+                    Terrace Ties
+                  </button>
+                </div>
+              </div>
+            </div>
             <div
               className="col-start-1 col-end-4 row-start-4 row-end-5
             rounded-xl grid grid-cols-3 gap-3 max-md:h-50 max-sm:h-25"
@@ -537,7 +545,7 @@ function App() {
             <div
               className="col-start-4 col-end-6 row-start-1 row-end-3 bg-purple-600 
             rounded-xl max-lg:col-start-1 max-lg:col-end-5 max-lg:row-start-5 
-            max-lg:row-end-7 max-md:h-30 max-sm:h-25"
+            max-lg:row-end-7 max-md:h-30 max-sm:h-25 "
             ></div>
             <div
               className="col-start-4 col-end-6 row-start-3 row-end-5 bg-slate-700
