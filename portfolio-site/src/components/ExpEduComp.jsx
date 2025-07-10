@@ -10,183 +10,109 @@ import SwitchButton from "./switchButton";
 import TimelineItem from "./TimelineItem";
 import TimelineContainer from "./TimelineContainer";
 
-const ExpEduComp = () => {
+const experienceData = [
+  {
+    id: "1",
+    period: "Sept 2024 - Present",
+    title: "Customer Service Team Member",
+    company: "Ocado Logistics",
+    logo: ocadoLogo,
+    logoBackground: "transparent",
+    clsNm : "size-20",
+    description: [
+      "Maxmised sales with thorough knowledge of over 50,000+ products maximising sales up 9.5% over the seasonal period",
+      "Ensured high levels of communiacation providing outstanding customer service and gaining 100% on multiple customer feedback forms",
+    ],
+  },
+  {
+    id: "2",
+    period: "Febr 2023 - July 2024",
+    title: "Home Delivery Driver",
+    company: "Asda Stores Limited",
+    logo: asdaLogo,
+    logoBackground: "white",
+    clsNm : "size-19",
+    description: [
+      "Delivered high quality service to up to 20 customers per shift",
+      "Tackled multiple issues on shift in dynamic enviroments, built strong customer relations developing brand image",
+    ],
+  },
+  {
+    id: "3",
+    period: "July 2021 - Sept 2023",
+    title: "Team Member",
+    company: "Welcome Break",
+    logo: welcomeBreakLogo,
+    logoBackground: "#272a2b",
+    clsNm : "size-19",
+    description: [
+      "Took deliveries of over 5000+ items ensuring correct quality and proper rotation, resulting in sales upwards of £15000 a day",
+      "Took Leadership roles to ensure quality of product and customer satisfaction, whilst coming face to face with over 300 customers daily",
+    ],
+  },
+];
 
-    const [selected, setSelected] = useState("experience")
+const educationData = [
+  {
+    id: "1",
+    period: "Sept 2021 - July 2024",
+    title: "BSc Interactive Media - 2:1",
+    company: "University Of York",
+    logo: yorkLogo,
+    logoBackground: "white",
+    clsNm : "w-19 h-10",
+    description: [
+      "Modules Include: UX Design, Computational Thinking (Object-Oriented Programming), Web Application Design, Mobile Interaction, Business in interactive media, Adobe Creative Suite Design, Advanced interaction techniques and technologies",
+    ],
+  },
+  {
+    id: "2",
+    period: "Sept 2019 - July 2021",
+    title: "A-Levels",
+    company: "Chancellor's School",
+    logo: chancellorsLogo,
+    logoBackground: "white",
+    clsNm : "size-15 mt-2",
+    description: [
+      "A-Levels in: Business Studies (A) - Film Studies (A) - Computer Science (B)",
+    ],
+  },
+  {
+    id: "3",
+    period: "Sept 2014 - July 2019",
+    title: "GCSE's",
+    company: "Chancellor's School",
+    logo: chancellorsLogo,
+    logoBackground: "white",
+    clsNm : "size-15 mt-2",
+    description: [
+      "GCSEs in: Computer Science - Media Studies - History - Maths - English Liturature - English Language - Combined Science - German",
+    ],
+  },
+];
+
+const ExpEduComp = () => {
+  const [selected, setSelected] = useState("experience");
 
   return (
     <div className="text-white font-roboto flex justify-center h-200 bg-black">
       {/* background */}
       <div
-        className="h-15/16 w-3/4 flex-col place-items-center shadow-[0_0_50px_10px_rgba(59,59,59,0.75)]
+        className="h-15/16 w-3/4 flex-col place-items-center shadow-[0_0_75px_5px_rgba(59,59,59,0.75)]
           rounded-[3rem] bg-neutral-950"
       >
-        {/* switch button */}
-        <SwitchButton isSelected={selected} onToggle={setSelected}/>
+        <SwitchButton isSelected={selected} onToggle={setSelected} />
 
         <div className="w-full h-1 bg-neutral-500 mt-5 -mb-0.5"></div>
-        <TimelineContainer />
-        {/* Code for Experience part of experience block */}
-        <div
-          className={`w-7/8 h-5/6 exp ${
-            selected === "experience"
-              ? "opacity-100"
-              : "opacity-0 absolute top-0 -z-10"
-          }`}
-        >
-          <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5"></div>
-
-          <div className="flex w-full h-1/10">
-            <div className="size-20 absolute -mt-1 rounded-full flex justify-center">
-              <img src={ocadoLogo} alt="logo from Ocado "></img>
-            </div>
-            <div className="w-1/6"></div>
-            <div className="flex-col -mt-2 w-5/6">
-              <p className="text-xs opacity-30">Sept 2024 - Present</p>
-              <h1>Customer Service Team Member</h1>
-              <p className="text-xs opacity-30">Ocado Logistics</p>
-              <p className="text-sm">
-                - Maxmised sales with thorough knowledge of over 50,000+
-                products maximising sales up 9.5% over the seasonal period
-              </p>
-              <p className="text-sm">
-                - Ensured high levels of communiacation providing outstanding
-                customer service and gaining 100% on multiple customer feedback
-                forms
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
-
-          <div className="flex w-full h-1/10">
-            <div className="size-20 bg-white rounded-full flex justify-center absolute -mt-1">
-              <img src={asdaLogo} alt="Logo from Asda" className="size-19" />
-            </div>
-            <div className="w-1/6"></div>
-            <div className="flex-col -mt-2 w-5/6">
-              <p className="text-xs opacity-30">Febr 2023 - July 2024</p>
-              <h1>Home Delivery Driver</h1>
-              <p className="text-xs opacity-30">Asda Stores Limited</p>
-              <p className="text-sm">
-                - Delivered high quality service to up to 20 customers per shift
-              </p>
-              <p className="text-sm">
-                - Tackled multiple issues on shift in dynamic enviroments, built
-                strong customer relations developing brand image
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
-
-          <div className="flex w-full h-1/10">
-            <div className="size-20  bg-[#272a2b] rounded-full flex justify-center absolute -mt-1">
-              <img
-                src={welcomeBreakLogo}
-                alt="image of welcome break logo"
-                className="size-19"
-              />
-            </div>
-            <div className="w-1/6"></div>
-            <div className="flex-col -mt-2 w-5/6">
-              <p className="text-xs opacity-30">July 2021 - Sept 2023</p>
-              <h1>Team Member</h1>
-              <p className="text-xs opacity-30">Welcome Break </p>
-              <p className="text-sm">
-                - Took deliveries of over 5000+ items ensuring correct quality
-                and proper rotation, resulting in sales upwards of £15000 a day
-              </p>
-              <p className="text-sm">
-                - Took Leadership roles to ensure quality of product and
-                customer satisfaction, whilst coming face to face with over 300
-                customers daily
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
-        </div>
-        {/* Code for education part of expierience */}
-        <div
-          className={`w-7/8 h-5/6 edu ${
-            selected === "education"
-              ? "opacity-100"
-              : "opacity-0 absolute top-0 -z-10"
-          }`}
-        >
-          <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5"></div>
-
-          <div className="flex w-full h-1/10">
-            <div className="size-20 absolute -mt-1 bg-white rounded-full flex justify-center items-center">
-              <img
-                src={yorkLogo}
-                alt="logo from University of York "
-                className="w-19 h-10"
-              ></img>
-            </div>
-            <div className="w-1/6"></div>
-            <div className="flex-col -mt-2 w-5/6">
-              <p className="text-xs opacity-30">Sept 2021 - July 2024</p>
-              <h1>BSc Interactive Media - 2:1</h1>
-              <p className="text-xs opacity-30">University Of York</p>
-              <p className="text-sm">
-                Modules Include: UX Design, Computational Thinking
-                (Object-Oriented Programming), Web Application Design, Mobile
-                Interaction, Business in interactive media, Adobe Creative Suite
-                Design, Advanced interaction techniques and technologies
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5"></div>
-
-          <div className="flex w-full h-1/10">
-            <div className="size-20 bg-white rounded-full flex justify-center items-center absolute -mt-1">
-              <img
-                src={chancellorsLogo}
-                alt="Logo from Asda"
-                className="size-15 mt-2"
-              />
-            </div>
-            <div className="w-1/6"></div>
-            <div className="flex-col -mt-2 w-5/6">
-              <p className="text-xs opacity-30">Sept 2019 - July 2021</p>
-              <h1>A-Levels</h1>
-              <p className="text-xs opacity-30">Chancellor's School</p>
-              <p className="text-sm">
-                A-Levels in: Business Studies(A) | Film Studies(A) | Computer
-                Science(B)
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1 h-1/5 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
-
-          <div className="flex w-full h-1/10">
-            <div className="size-20  bg-white rounded-full flex justify-center items-center absolute -mt-1">
-              <img
-                src={chancellorsLogo}
-                alt="image of welcome break logo"
-                className="size-15 mt-2"
-              />
-            </div>
-            <div className="w-1/6"></div>
-            <div className="flex-col -mt-2 w-5/6">
-              <p className="text-xs opacity-30">Sept 2014 - July 2019</p>
-              <h1>GCSEs</h1>
-              <p className="text-xs opacity-30">Chancellor's School</p>
-              <p className="text-sm">
-                GCSEs in: Computer Science | Media Studies | History | Maths |
-                English Liturature | English Language | Combined Science |
-                German
-              </p>
-            </div>
-          </div>
-
-          <div className="w-1 h-1/7 border-2 border-neutral-500 rounded-full ml-9.5 "></div>
-        </div>
-        <div className="w-full h-1 bg-neutral-500 -mt-3"></div>
+          <TimelineContainer
+            items={experienceData}
+            isVisible={selected === "experience"}
+          />
+          <TimelineContainer
+            items={educationData}
+            isVisible={selected === "education"}
+          />
+        <div className="w-full h-1 bg-neutral-500 -mt-9.5"></div>
       </div>
     </div>
   );
