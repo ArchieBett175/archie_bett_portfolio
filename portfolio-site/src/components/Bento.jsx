@@ -2,6 +2,7 @@ import React from "react";
 import {
   AboutBlock,
   Block,
+  GridBlock,
   ProjectBlock,
   ProjectLibBlock,
 } from "./Block";
@@ -13,9 +14,7 @@ const Bento = () => {
         <ProjectBlock />
         <ProjectLibBlock />
         <AboutBlock />
-        <Block />
-        <Block />
-        <Block />
+        <GridBlock />
       </div>
     </div>
   );

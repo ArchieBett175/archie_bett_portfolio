@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiYoutube } from "react-icons/si";
-import { SlSocialTwitter } from "react-icons/sl";
 import { twMerge } from "tailwind-merge";
 import { motion } from "motion/react";
 import TerrTieLogo from "../assets/TerraceTiesLogo.png";
 import CCCLogo from "../assets/cccLogo.png";
 import portfolioScrnShot from "../assets/portfolioScrnShot.png";
 import "../index.css";
-import { filter } from "motion/react-client";
-import { FaHardHat } from "react-icons/fa";
+import GitHubCalendar from "react-github-calendar";
 
 const Block = ({ className, ...rest }) => {
   return (
@@ -163,6 +160,37 @@ const AboutBlock = () => {
   );
 };
 
+const selectLastHalfYear = (contributions) => {
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().getMonth();
+  const shownMonths = 6;
+
+  return contributions.filter((activity) => {
+    const date = new Date(activity.date);
+    const monthOfDay = date.getMonth();
+
+    return (
+      date.getFullYear() === currentYear &&
+      monthOfDay > currentMonth - shownMonths &&
+      monthOfDay <= currentMonth
+    );
+  });
+};
+
+const GridBlock = () => {
+  return (
+    <Block className="col-span-12 text-3xl md:col-span-6">
+      <GitHubCalendar
+        username="ArchieBett175"
+        transformData={selectLastHalfYear}
+        labels={{
+          totalCount: "{{count}} contributions in the last half year",
+        }}
+      />
+    </Block>
+  );
+};
+
 //TO-DO - github block, spotify block, techstack block, {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks]
 
-export { Block, ProjectBlock, AboutBlock, ProjectLibBlock };
+export { Block, ProjectBlock, AboutBlock, ProjectLibBlock, GridBlock };
