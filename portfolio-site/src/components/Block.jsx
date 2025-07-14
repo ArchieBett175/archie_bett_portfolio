@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 import { motion } from "motion/react";
@@ -7,6 +7,7 @@ import CCCLogo from "../assets/cccLogo.png";
 import portfolioScrnShot from "../assets/portfolioScrnShot.png";
 import "../index.css";
 import GitHubCalendar from "react-github-calendar";
+
 
 const Block = ({ className, ...rest }) => {
   return (
@@ -191,6 +192,43 @@ const GridBlock = () => {
   );
 };
 
-//TO-DO - github block, spotify block, techstack block, {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks]
 
-export { Block, ProjectBlock, AboutBlock, ProjectLibBlock, GridBlock };
+
+
+const SpotifyBlock = () => {
+
+  const [spotifyData, setSpotifyData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] =useState(null)
+
+  useEffect(() => {
+    async function fetchSpotifyData() {
+      try {
+        const response = await fetch('http://localhost:3000/api/spotify-token');
+        const data = await response.json();
+        console.log(data);
+        setSpotifyData(data);
+      } catch (err) {
+        console.error('Error fetching Spotify data:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchSpotifyData();
+    // return () => {
+    //   //cleanup code here
+    // };
+  }, []);
+
+  return (
+  <Block>
+
+  </Block>
+  );
+}
+
+//TO-DO -  spotify block, techstack block, {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks]
+
+export { Block, ProjectBlock, AboutBlock, ProjectLibBlock, GridBlock, SpotifyBlock };

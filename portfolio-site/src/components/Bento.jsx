@@ -5,6 +5,7 @@ import {
   GridBlock,
   ProjectBlock,
   ProjectLibBlock,
+  SpotifyBlock
 } from "./Block";
 
 const Bento = () => {
@@ -15,6 +16,7 @@ const Bento = () => {
         <ProjectLibBlock />
         <AboutBlock />
         <GridBlock />
+        <SpotifyBlock />
       </div>
     </div>
   );
