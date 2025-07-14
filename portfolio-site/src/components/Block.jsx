@@ -7,7 +7,7 @@ import CCCLogo from "../assets/cccLogo.png";
 import portfolioScrnShot from "../assets/portfolioScrnShot.png";
 import "../index.css";
 import GitHubCalendar from "react-github-calendar";
-
+import { FaSpotify } from "react-icons/fa";
 
 const Block = ({ className, ...rest }) => {
   return (
@@ -192,43 +192,126 @@ const GridBlock = () => {
   );
 };
 
-
-
-
 const SpotifyBlock = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentlyPlaying, setCurrentlyPlaying] = useState({
+    track: null,
+    artists: null,
+    cover: null,
+    trackLink: null,
+  });
+  const [recentlyPlayed, setRecentlyPlayed] = useState({
+    track: null,
+    artists: null,
+    cover: null,
+    trackLink: null,
+  });
 
-  const [spotifyData, setSpotifyData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] =useState(null)
+  async function fetchLastPlayed() {
+    try {
+      const response = await fetch(
+        "http://localhost:3000/api/my-recently-played"
+      );
+      const data = await response.json();
+      let dArtists = data.items[0].track.artists;
+      setRecentlyPlayed((c) => ({
+        track: data.items[0].track.name,
+        artists: dArtists.map((n) => n.name),
+        cover: data.items[0].track.album.images[0].url,
+        trackLink: data.items[0].track.external_urls.spotify,
+      }));
+      setIsPlaying(false);
+    } catch (err) {
+      console.error("Error fetching last played:", err);
+    }
+  }
 
   useEffect(() => {
-    async function fetchSpotifyData() {
+    async function fetchCurrentlyPlaying() {
       try {
-        const response = await fetch('http://localhost:3000/api/spotify-token');
+        const response = await fetch(
+          "http://localhost:3000/api/my-currently-playing"
+        );
         const data = await response.json();
-        console.log(data);
-        setSpotifyData(data);
+        if (data.is_playing) {
+          let dArtists = data.item.artists;
+          setCurrentlyPlaying((c) => ({
+            track: data.item.name,
+            artists: dArtists.map((n) => n.name),
+            cover: data.item.album.images[0].url,
+            trackLink: data.item.external_urls.spotify,
+          }));
+          setIsPlaying(true);
+        } else {
+          fetchLastPlayed();
+        }
       } catch (err) {
-        console.error('Error fetching Spotify data:', err);
+        console.error("Error fetching currently playing:", err);
         setError(err.message);
       } finally {
         setLoading(false);
       }
     }
 
-    fetchSpotifyData();
+    fetchCurrentlyPlaying();
+
     // return () => {
     //   //cleanup code here
     // };
   }, []);
 
+  const displayTrack = isPlaying ? currentlyPlaying : recentlyPlayed;
+  const trackStatus = isPlaying ? "Currently Playing" : "Last Played";
+
+  if (loading)
+    return (
+      <Block className="h-full w-full flex align-middle justify-center">
+        Loading...
+      </Block>
+    );
+  if (error)
+    return (
+      <Block className="h-full w-full flex align-middle justify-center ">
+        Error: {error}
+      </Block>
+    );
+
   return (
-  <Block>
-
-  </Block>
+    <Block className="col-span-12 text-2xl md:col-span-6 place-content-center relative">
+      {displayTrack ? (
+        <div className="flex">
+          <div className="bg-slate-700 absolute top-4 right-6 border-4 border-slate-700 rounded-3xl">
+            <FaSpotify className="" />
+          </div>
+          <img
+            src={displayTrack.cover}
+            alt={`Album Art of ${displayTrack.track}`}
+            className="size-34 border-8 border-zinc-700 rounded-2xl"
+          />
+          <div className="flex-col ml-7 w-full gap-2">
+            <h1 className="text-zinc-400 text-lg mb-2">{trackStatus}</h1>
+            <h1>{displayTrack.track}</h1>
+            <div className="text-zinc-400">
+              {displayTrack.artists?.join(", ")}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <p>Error: {error}</p>
+      )}
+    </Block>
   );
-}
+};
 
-//TO-DO -  spotify block, techstack block, {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks]
+//TO-DO -  techstack block, {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks]
 
-export { Block, ProjectBlock, AboutBlock, ProjectLibBlock, GridBlock, SpotifyBlock };
+export {
+  Block,
+  ProjectBlock,
+  AboutBlock,
+  ProjectLibBlock,
+  GridBlock,
+  SpotifyBlock,
+};
