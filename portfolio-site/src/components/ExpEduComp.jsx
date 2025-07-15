@@ -9,6 +9,8 @@ import chancellorsLogo from "../assets/chancellors_sch_logo.png";
 import SwitchButton from "./switchButton";
 import TimelineItem from "./TimelineItem";
 import TimelineContainer from "./TimelineContainer";
+import ExpandableColumns from "./ExpandableColumns/ExpandableColumns";
+import "../index.css";
 
 const experienceData = [
   {
@@ -18,11 +20,15 @@ const experienceData = [
     company: "Ocado Logistics",
     logo: ocadoLogo,
     logoBackground: "transparent",
-    clsNm : "size-20",
+    clsNm: "size-20",
     description: [
       "Maxmised sales with thorough knowledge of over 50,000+ products maximising sales up 9.5% over the seasonal period",
       "Ensured high levels of communiacation providing outstanding customer service and gaining 100% on multiple customer feedback forms",
     ],
+    shortDescription:
+      "Focused on sales maximisation, delivering exceptional Customer Service",
+    cardColour:
+      "bg-gradient-to-b from-purple-500/20 via-indigo-600/20 to-violet-600/20 backdrop-blur-2xl",
   },
   {
     id: "2",
@@ -31,11 +37,15 @@ const experienceData = [
     company: "Asda Stores Limited",
     logo: asdaLogo,
     logoBackground: "white",
-    clsNm : "size-19",
+    clsNm: "size-19",
     description: [
       "Delivered high quality service to up to 20 customers per shift",
       "Tackled multiple issues on shift in dynamic enviroments, built strong customer relations developing brand image",
     ],
+    shortDescription:
+      "Delivered outstanding customer experience in fast dynamic enviroment",
+    cardColour:
+      "bg-gradient-to-b from-teal-500/20 via-emerald-600/20 to-green-600/20 backdrop-blur-2xl",
   },
   {
     id: "3",
@@ -44,11 +54,15 @@ const experienceData = [
     company: "Welcome Break",
     logo: welcomeBreakLogo,
     logoBackground: "#272a2b",
-    clsNm : "size-19",
+    clsNm: "size-19",
     description: [
       "Took deliveries of over 5000+ items ensuring correct quality and proper rotation, resulting in sales upwards of £15000 a day",
       "Took Leadership roles to ensure quality of product and customer satisfaction, whilst coming face to face with over 300 customers daily",
     ],
+    shortDescription:
+      "Maintained Quality and Proffesionalism whilst serving upwards of 300 customers daily",
+    cardColour:
+      "bg-gradient-to-b from-lime-500/20 via-lime-600/20 to-lime-700/20 backdrop-blur-2xl",
   },
 ];
 
@@ -60,10 +74,14 @@ const educationData = [
     company: "University Of York",
     logo: yorkLogo,
     logoBackground: "white",
-    clsNm : "w-19 h-10",
+    clsNm: "w-19 h-10",
     description: [
       "Modules Include: UX Design, Computational Thinking (Object-Oriented Programming), Web Application Design, Mobile Interaction, Business in interactive media, Adobe Creative Suite Design, Advanced interaction techniques and technologies",
     ],
+    shortDescription:
+      "A Computer Science based degree focused on solving complex problems with high value solutions",
+    cardColour:
+      "bg-gradient-to-b from-yellow-500/20 via-yellow-400/20 to-black/20 backdrop-blur-2xl",
   },
   {
     id: "2",
@@ -72,10 +90,13 @@ const educationData = [
     company: "Chancellor's School",
     logo: chancellorsLogo,
     logoBackground: "white",
-    clsNm : "size-15 mt-2",
+    clsNm: "size-15 mt-2",
     description: [
       "A-Levels in: Business Studies (A) - Film Studies (A) - Computer Science (B)",
     ],
+    shortDescription: "Completed 3 A-levels, achieving high grades",
+    cardColour:
+      "bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl",
   },
   {
     id: "3",
@@ -84,10 +105,13 @@ const educationData = [
     company: "Chancellor's School",
     logo: chancellorsLogo,
     logoBackground: "white",
-    clsNm : "size-15 mt-2",
+    clsNm: "size-15 mt-2",
     description: [
       "GCSEs in: Computer Science - Media Studies - History - Maths - English Liturature - English Language - Combined Science - German",
     ],
+    shortDescription: "Gained 9 GCSE's and countless experiences and memories",
+    cardColour:
+      "bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl",
   },
 ];
 
@@ -95,24 +119,33 @@ const ExpEduComp = () => {
   const [selected, setSelected] = useState("experience");
 
   return (
-    <div className="text-white font-roboto flex justify-center h-200 bg-black">
+    <div className="text-white flex justify-center h-200 bg-black">
       {/* background */}
       <div
         className="h-15/16 w-3/4 flex-col place-items-center shadow-[0_0_75px_5px_rgba(59,59,59,0.75)]
-          rounded-[3rem] bg-neutral-950"
+          rounded-[3rem] bg-neutral-950 bg-card bg-opacity-20 "
       >
         <SwitchButton isSelected={selected} onToggle={setSelected} />
+        <div className="bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl"></div>
 
-        <div className="w-full h-1 bg-neutral-500 mt-5 -mb-0.5"></div>
-          <TimelineContainer
+        <div className="w-full h-1 bg-neutral-500 mt-5 mb-9"></div>
+        {/* <TimelineContainer
             items={experienceData}
             isVisible={selected === "experience"}
           />
           <TimelineContainer
             items={educationData}
             isVisible={selected === "education"}
-          />
-        <div className="w-full h-1 bg-neutral-500 -mt-9.5"></div>
+          /> */}
+        <ExpandableColumns
+          items={experienceData}
+          isVisible={selected === "experience"}
+        />
+        <ExpandableColumns
+          items={educationData}
+          isVisible={selected === "education"}
+        />
+        <div className="w-full h-1 bg-neutral-500 mt-9.5"></div>
       </div>
     </div>
   );

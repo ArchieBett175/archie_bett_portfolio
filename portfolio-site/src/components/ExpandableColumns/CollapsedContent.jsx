@@ -9,9 +9,9 @@ const CollapsedContent = ({ shortDescription }) => {
       exit={{ opacity: 0 }}
       className="flex-1 flex-col flex justify-center"
     >
-        <p className="text-center opacity-90">{shortDescription}</p>
+        <p className="text-center opacity-50 text-lg">{shortDescription}</p>
         <div className="mt-4 text-center">
-            <span className="text-sm opacity-75">Click to expand</span>
+            <span className="text-xs opacity-75">Click to expand</span>
         </div>
     </motion.div>
   );

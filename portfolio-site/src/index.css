@@ -1,30 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/forms";
 
-
 @theme {
-    --font-roboto: "Roboto", sans-serif;
-    --breakpoint-lgmd: 56rem;
-    --color-bg_pink: hsla(310,97%,60%,1);
-    --color-bg_purple: hsla(235,89%,78%,1);
-    --color-bg_grey: hsla(250,64%,79%,0.49);
-  }
-
-
-
-.background {
-    background-color:hsla(0,0%,0%,1);
-    background-image:
-    radial-gradient(at 9% 0%, hsla(357,77%,71%,0.5) 0px, transparent 50%),
-    radial-gradient(at 92% 4%, hsla(235,89%,78%,1) 0px, transparent 50%),
-    radial-gradient(at 90% 2%, hsla(326,73%,70%,1) 0px, transparent 50%),
-    radial-gradient(at 62% 0%, hsla(250,64%,79%,0.49) 0px, transparent 50%),
-    radial-gradient(at 15% 0%, hsla(310,97%,60%,1) 0px, transparent 50%);
+  --font-roboto: "Roboto", sans-serif;
+  --breakpoint-lgmd: 56rem;
+  --color-bg_pink: hsla(310, 97%, 60%, 1);
+  --color-bg_purple: hsla(235, 89%, 78%, 1);
+  --color-bg_grey: hsla(250, 64%, 79%, 0.49);
 }
 
-@layer utilities{
-  .text-gradient{
+.background {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 9% 0%,
+      hsla(357, 77%, 71%, 0.5) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 92% 4%, hsla(235, 89%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 90% 2%, hsla(326, 73%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 62% 0%, hsla(250, 64%, 79%, 0.49) 0px, transparent 50%),
+    radial-gradient(at 15% 0%, hsla(310, 97%, 60%, 1) 0px, transparent 50%);
+}
+
+.bg-card {
+  background-color: hsla(87, 100%, 80%, 0.19);
+  background-image: radial-gradient(
+      at 16% 28%,
+      hsla(22122222222221864, 67%, 25%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 7% 97%,
+      hsla(34222222222221864, 67%, 25%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 93% 34%,
+      hsla(11822222222221862, 67%, 25%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 11% 14%,
+      hsla(35522222222221864, 67%, 25%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 84% 19%,
+      hsla(8122222222221862, 67%, 25%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 37% 84%,
+      hsla(25322222222221864, 67%, 25%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 60% 99%,
+      hsla(34622222222221864, 67%, 25%, 1) 0px,
+      transparent 50%
+    );
+}
+
+@layer utilities {
+  .text-gradient {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }

@@ -35,7 +35,7 @@ const ExpandableColumn = ({
       animate={{ width: getColumnWidth() }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-20" />
+      <div className={`absolute inset-0 bg-opacity-20 ${column.cardColour}`} />
       <div className="relative z-10 p-6 h-full flex flex-col text-zinc-200">
         <ColumnHeader
           title={column.title}
@@ -43,6 +43,7 @@ const ExpandableColumn = ({
           logo={column.logo}
           timeFrame={column.period}
           clsNm={column.clsNm}
+          logoBackground={column.logoBackground}
           isActive={isActive}
           onClose={(e) => {
             e.stopPropagation();
@@ -50,7 +51,9 @@ const ExpandableColumn = ({
           }}
         />
 
-        {isActive && (
+
+          {console.log(column.description)}
+        {!isActive && (
           <CollapsedContent shortDescription={column.shortDescription} />
         )}
 

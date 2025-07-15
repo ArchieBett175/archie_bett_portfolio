@@ -11,10 +11,12 @@ const ExpandedContent = ({ fullDescription }) => {
       className="flex-1 overflow-y-auto"
     >
       <div className="space-y-4">
-        <div>
-          {fullDescription.map((desc, index) => {
-            <p key={index} className="text-sm wrap-normal">{`- ${desc}`}</p>;
-          })}
+        <div className="w-1/2 mx-auto">
+          <div className="">
+            {fullDescription.map((desc, index) => (
+              <p key={index} className="text-lg wrap-normal text-center mb-5">{`- ${desc}`}</p>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>
