@@ -7,7 +7,22 @@ import CCCLogo from "../assets/cccLogo.png";
 import portfolioScrnShot from "../assets/portfolioScrnShot.png";
 import "../index.css";
 import GitHubCalendar from "react-github-calendar";
-import { FaSpotify } from "react-icons/fa";
+import {
+  FaFigma,
+  FaGit,
+  FaGithub,
+  FaJava,
+  FaJsSquare,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+  FaSpotify,
+  FaUnity,
+} from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+import { SiAdobe, SiBlender, SiKotlin, SiPostgresql } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 const Block = ({ className, ...rest }) => {
   return (
@@ -149,7 +164,7 @@ const AboutBlock = () => {
           I love building, learning and working with technology. I build with
           <span className="text-zinc-50">
             {" "}
-            passion drive and determination
+            passion, drive and determination
           </span>{" "}
           to cause real-world impact with my projects, whilst engrossing myself
           and loving the process. I am fascinated by the developing world of
@@ -180,14 +195,19 @@ const selectLastHalfYear = (contributions) => {
 
 const GridBlock = () => {
   return (
-    <Block className="col-span-12 text-3xl md:col-span-6">
-      <GitHubCalendar
-        username="ArchieBett175"
-        transformData={selectLastHalfYear}
-        labels={{
-          totalCount: "{{count}} contributions in the last half year",
-        }}
-      />
+    <Block className="col-span-12 text-3xl md:col-span-6 relative">
+      <div className="bg-slate-700 border-4 border-slate-700 rounded-3xl w-fit absolute right-4 top-3">
+      <FaGithub className="" />
+      </div>
+      <div className=" flex justify-center w-full mt-3">
+        <GitHubCalendar
+          username="ArchieBett175"
+          transformData={selectLastHalfYear}
+          labels={{
+            totalCount: "{{count}} contributions in the last half year",
+          }}
+        />
+      </div>
     </Block>
   );
 };
@@ -305,7 +325,81 @@ const SpotifyBlock = () => {
   );
 };
 
-//TO-DO -  techstack block, {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks]
+const TechStackBlock = () => {
+  const techStack = [
+    <FaReact />,
+    <FaJsSquare />,
+    <FaPython />,
+    <FaNodeJs />,
+    <IoLogoFirebase />,
+    <SiPostgresql />,
+    <RiTailwindCssFill />,
+    <FaJava />,
+    <SiKotlin />,
+    <TbBrandFramerMotion />,
+    <FaUnity />,
+    <FaFigma />,
+    <SiBlender />,
+    <SiAdobe />,
+  ];
+
+  const duplicatedStack = [...techStack, ...techStack];
+
+  return (
+    <Block className="col-span-12 text-3xl w-full overflow-hidden">
+      <div className="flex max-w-6xl mx-auto items-center w-full">
+        <h1 className="font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 text-4xl whitespace-nowrap text-center mb-3">
+          Tech Stack
+        </h1>
+
+        <div className="ml-5 relative w-full">
+          <div className="absolute left-0 top-0 w-18 md:w-48 h-full bg-gradient-to-r from-zinc-800 via-zinc-800/80 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-10 top-0 w-48 h-full bg-gradient-to-l from-zinc-800 via-zinc-800/80 to-transparent z-10 pointer-events-none"></div>
+
+          <div className="overflow-hidden">
+            <motion.div
+              className="flex gap-8 py-8"
+              animate={{
+                x: [0, -80 * techStack.length],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear",
+                },
+              }}
+            >
+              {duplicatedStack.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  className="flex-shrink-0 w-12 h-12 flex items-center justify-center"
+                  whileHover={{
+                    scale: 1.05,
+                    y: -5,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20,
+                  }}
+                >
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">{tech}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full justify-center flex text-2xl text-zinc-400"></div>
+    </Block>
+  );
+};
+
+//TO-DO -  {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks], add links to bento grid
 
 export {
   Block,
@@ -314,4 +408,5 @@ export {
   ProjectLibBlock,
   GridBlock,
   SpotifyBlock,
+  TechStackBlock,
 };
