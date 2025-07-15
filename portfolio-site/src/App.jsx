@@ -22,4 +22,6 @@ function App() {
   );
 }
 
+//to-do, finialise styling of experience and education system, make responsive for mobile. move onto projects page and blog
+
 export default App;
