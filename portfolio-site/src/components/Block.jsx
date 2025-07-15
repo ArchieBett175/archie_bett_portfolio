@@ -195,19 +195,24 @@ const selectLastHalfYear = (contributions) => {
 
 const GridBlock = () => {
   return (
-    <Block className="col-span-12 text-3xl md:col-span-6 relative">
-      <div className="bg-slate-700 border-4 border-slate-700 rounded-3xl w-fit absolute right-4 top-3">
-      <FaGithub className="" />
-      </div>
-      <div className=" flex justify-center w-full mt-3">
-        <GitHubCalendar
-          username="ArchieBett175"
-          transformData={selectLastHalfYear}
-          labels={{
-            totalCount: "{{count}} contributions in the last half year",
-          }}
-        />
-      </div>
+    <Block
+      className="col-span-12 text-3xl md:col-span-6 relative"
+      whileHover={{ rotate: "-.5deg", scale: 1.07 }}
+    >
+      <a href="https://github.com/ArchieBett175" target="_blank">
+        <div className="bg-slate-700 border-4 border-slate-700 rounded-3xl w-fit absolute right-4 top-3">
+          <FaGithub className="" />
+        </div>
+        <div className=" flex justify-center w-full mt-3">
+          <GitHubCalendar
+            username="ArchieBett175"
+            transformData={selectLastHalfYear}
+            labels={{
+              totalCount: "{{count}} contributions in the last half year",
+            }}
+          />
+        </div>
+      </a>
     </Block>
   );
 };
@@ -299,25 +304,30 @@ const SpotifyBlock = () => {
     );
 
   return (
-    <Block className="col-span-12 text-2xl md:col-span-6 place-content-center relative">
+    <Block
+      className="col-span-12 text-2xl md:col-span-6 place-content-center relative"
+      whileHover={{ rotate: "-.5deg", scale: 1.07 }}
+    >
       {displayTrack ? (
-        <div className="flex">
-          <div className="bg-slate-700 absolute top-4 right-6 border-4 border-slate-700 rounded-3xl">
-            <FaSpotify className="" />
-          </div>
-          <img
-            src={displayTrack.cover}
-            alt={`Album Art of ${displayTrack.track}`}
-            className="size-34 border-8 border-zinc-700 rounded-2xl"
-          />
-          <div className="flex-col ml-7 w-full gap-2">
-            <h1 className="text-zinc-400 text-lg mb-2">{trackStatus}</h1>
-            <h1>{displayTrack.track}</h1>
-            <div className="text-zinc-400">
-              {displayTrack.artists?.join(", ")}
+        <a href={displayTrack.trackLink} target="_blank">
+          <div className="flex">
+            <div className="bg-slate-700 absolute top-4 right-6 border-4 border-slate-700 rounded-3xl">
+              <FaSpotify className="" />
+            </div>
+            <img
+              src={displayTrack.cover}
+              alt={`Album Art of ${displayTrack.track}`}
+              className="size-34 border-8 border-zinc-700 rounded-2xl"
+            />
+            <div className="flex-col ml-7 w-full gap-2">
+              <h1 className="text-zinc-400 text-lg mb-2">{trackStatus}</h1>
+              <h1>{displayTrack.track}</h1>
+              <div className="text-zinc-400">
+                {displayTrack.artists?.join(", ")}
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       ) : (
         <p>Error: {error}</p>
       )}
@@ -399,7 +409,7 @@ const TechStackBlock = () => {
   );
 };
 
-//TO-DO -  {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks], add links to bento grid
+//TO-DO -  {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks], create initial animation on bento when scroll
 
 export {
   Block,
