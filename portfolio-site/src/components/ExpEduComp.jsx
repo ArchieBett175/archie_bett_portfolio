@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { motion } from "motion/react";
 import ocadoLogo from "../assets/ocado-logo.png";
@@ -7,10 +7,10 @@ import welcomeBreakLogo from "../assets/Welcome_Break_logo.svg";
 import yorkLogo from "../assets/uni_york_logo.png";
 import chancellorsLogo from "../assets/chancellors_sch_logo.png";
 import SwitchButton from "./switchButton";
-import TimelineItem from "./TimelineItem";
-import TimelineContainer from "./TimelineContainer";
 import ExpandableColumns from "./ExpandableColumns/ExpandableColumns";
 import "../index.css";
+import MobileCarousel from "./ExpandableColumns/MobileCarousel";
+import { HandHelpingIcon } from "lucide-react";
 
 const experienceData = [
   {
@@ -117,34 +117,43 @@ const educationData = [
 
 const ExpEduComp = () => {
   const [selected, setSelected] = useState("experience");
+  const [isMediumOrLarger, setIsMediumOrLarger] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 786px)");
+
+    const handleChange = (e) => {
+      setIsMediumOrLarger(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   return (
     <div className="text-white flex justify-center h-200 bg-black">
       {/* background */}
       <div
-        className="h-15/16 w-3/4 flex-col place-items-center shadow-[0_0_75px_5px_rgba(59,59,59,0.75)]
+        className="h-15/16 md:w-3/4 w-10/11 flex-col place-items-center shadow-[0_0_75px_5px_rgba(59,59,59,0.75)]
           rounded-[3rem] bg-neutral-950 bg-card bg-opacity-20 "
       >
         <SwitchButton isSelected={selected} onToggle={setSelected} />
         <div className="bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl"></div>
-
         <div className="w-full h-1 bg-neutral-500 mt-5 mb-9"></div>
-        {/* <TimelineContainer
-            items={experienceData}
-            isVisible={selected === "experience"}
-          />
-          <TimelineContainer
-            items={educationData}
-            isVisible={selected === "education"}
-          /> */}
         <ExpandableColumns
           items={experienceData}
-          isVisible={selected === "experience"}
+          isVisible={selected === "experience" && isMediumOrLarger}
         />
         <ExpandableColumns
           items={educationData}
-          isVisible={selected === "education"}
+          isVisible={selected === "education" && isMediumOrLarger}
         />
+
+        <div id="carousel-mobile">
+          <MobileCarousel items={experienceData} isVisible={selected === "experience" && !isMediumOrLarger} />
+          <MobileCarousel items={educationData} isVisible={selected === "education" && !isMediumOrLarger} />
+        </div>
         <div className="w-full h-1 bg-neutral-500 mt-9.5"></div>
       </div>
     </div>

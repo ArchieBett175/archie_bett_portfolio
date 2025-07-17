@@ -409,7 +409,7 @@ const TechStackBlock = () => {
   );
 };
 
-//TO-DO -  {Maybe redo CV element in terms of styling it looks poo}, [potentially glass styling on construc and explore blocks], create initial animation on bento when scroll
+//TO-DO - create initial animation on bento when scroll
 
 export {
   Block,

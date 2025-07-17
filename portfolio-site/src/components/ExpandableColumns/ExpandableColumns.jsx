@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ExpandableColumn from "./ExpandableColumn";
 
-
 const ExpandableColumns = ({ isVisible, items }) => {
   const [activeColumn, setActiveColumn] = useState(null);
 
@@ -13,7 +12,7 @@ const ExpandableColumns = ({ isVisible, items }) => {
       }`}
     >
       <div
-        className="flex h-128 gap-2 relative "
+        className="flex space-y-4 md:flex-row md:space-y-0 md:gap-2 h-auto md:h-128 relative"
         onClick={(e) => {
           if (e.target === e.currentTarget) handleOutsideClick();
         }}
