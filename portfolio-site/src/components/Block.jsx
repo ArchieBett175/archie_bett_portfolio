@@ -9,7 +9,6 @@ import "../index.css";
 import GitHubCalendar from "react-github-calendar";
 import {
   FaFigma,
-  FaGit,
   FaGithub,
   FaJava,
   FaJsSquare,

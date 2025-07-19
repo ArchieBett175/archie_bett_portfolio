@@ -120,7 +120,9 @@ const ExpEduComp = () => {
   const [isMediumOrLarger, setIsMediumOrLarger] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 786px)");
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+      setIsMediumOrLarger(mediaQuery.matches);
 
     const handleChange = (e) => {
       setIsMediumOrLarger(e.matches);
@@ -130,6 +132,7 @@ const ExpEduComp = () => {
 
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
+  console.log(isMediumOrLarger)
 
   return (
     <div className="text-white flex justify-center h-200 bg-black">
@@ -150,7 +153,7 @@ const ExpEduComp = () => {
           isVisible={selected === "education" && isMediumOrLarger}
         />
 
-        <div id="carousel-mobile">
+        <div id="carousel-mobile" className="md:hidden">
           <MobileCarousel items={experienceData} isVisible={selected === "experience" && !isMediumOrLarger} />
           <MobileCarousel items={educationData} isVisible={selected === "education" && !isMediumOrLarger} />
         </div>
