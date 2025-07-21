@@ -17,6 +17,15 @@
             "coverImage": "/images/graduation.jpg",
             "readtime": 5,
             "published": true
+        },
+        {
+            "slug": "post-three",
+            "title": "My journey in creating digital media",
+            "date": "2025-07-22",
+            "excerpt": "A Showcase of my digital media creations ",
+            "coverImage": "/images/digital_media_example.png",
+            "readtime": 5,
+            "published": true
         }
     ]
 }

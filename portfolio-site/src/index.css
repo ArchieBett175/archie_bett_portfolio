@@ -23,40 +23,17 @@
 }
 
 .bg-card {
-  background-color: hsla(87, 100%, 80%, 0.19);
+  background-color: hsla(0, 0%, 35%, 1);
   background-image: radial-gradient(
-      at 16% 28%,
-      hsla(22122222222221864, 67%, 25%, 1) 0px,
+      at 0% 100%,
+      hsla(266, 100%, 61%, 0.74) 0px,
       transparent 50%
     ),
+    radial-gradient(at 0% 28%, hsla(240, 100%, 19%, 0.73) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(269, 100%, 40%, 0.7) 0px, transparent 50%),
     radial-gradient(
-      at 7% 97%,
-      hsla(34222222222221864, 67%, 25%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 93% 34%,
-      hsla(11822222222221862, 67%, 25%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 11% 14%,
-      hsla(35522222222221864, 67%, 25%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 84% 19%,
-      hsla(8122222222221862, 67%, 25%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 37% 84%,
-      hsla(25322222222221864, 67%, 25%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(
-      at 60% 99%,
-      hsla(34622222222221864, 67%, 25%, 1) 0px,
+      at 100% 100%,
+      hsla(269, 100%, 40%, 0.74) 0px,
       transparent 50%
     );
 }

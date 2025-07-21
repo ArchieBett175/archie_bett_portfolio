@@ -26,6 +26,6 @@ function App() {
   );
 }
 
-//to-do, blog - create, project pages - create links
+//to-do, blog - pages, project pages - create links, framer animation - blog section, hero section
 
 export default App;

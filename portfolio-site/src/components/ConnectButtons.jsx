@@ -17,7 +17,7 @@ const ConnectButtons = () => {
       <h1 className="font-roboto font-light opacity-40">Let's Connect ...</h1>
       <ul className="flex gap-3 mt-2 connect-keys">
         <ConnectButton icon={<FiGithub className="size-10"/>} infoTag={"GitHub"} marLeft={"ml-[-5px]"}/>
-        <ConnectButton icon={<FiLinkedin className="size-10"/>} infoTag={"LinkedIn"} marLeft={"ml-[-13px"} />
+        <ConnectButton icon={<FiLinkedin className="size-10"/>} infoTag={"LinkedIn"} marLeft={"ml-[-13px]"} />
         <ConnectButton icon={<MdOutlineMailOutline className="size-10"/>} infoTag={"Email"} marLeft={"ml-[-3px]"}/>
         <ConnectButton icon={<PiReadCvLogoBold className="size-10"/>} infoTag={"CV"} marLeft={"ml-[7px]"} />
       </ul>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { motion } from "motion/react";
+import { animate, motion } from "motion/react";
 import ocadoLogo from "../assets/ocado-logo.png";
 import asdaLogo from "../assets/asda-logo.png";
 import welcomeBreakLogo from "../assets/Welcome_Break_logo.svg";
@@ -122,7 +122,7 @@ const ExpEduComp = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-      setIsMediumOrLarger(mediaQuery.matches);
+    setIsMediumOrLarger(mediaQuery.matches);
 
     const handleChange = (e) => {
       setIsMediumOrLarger(e.matches);
@@ -132,33 +132,57 @@ const ExpEduComp = () => {
 
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
-  console.log(isMediumOrLarger)
 
   return (
     <div className="text-white flex justify-center h-200 bg-black">
       {/* background */}
-      <div
-        className="h-15/16 md:w-3/4 w-10/11 flex-col place-items-center shadow-[0_0_75px_5px_rgba(59,59,59,0.75)]
-          rounded-[3rem] bg-neutral-950 bg-card bg-opacity-20 "
+      <motion.div
+        initial={{ width: "150%", borderRadius: "0rem" }}
+        whileInView={{ width: isMediumOrLarger ? "80%" : "95%", borderRadius: "3rem" }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="h-15/16 md:w-3/4 w-10/11 flex-col place-items-center
+          rounded-[3rem] bg-gradient-to-b bg-zinc-800 border-2 border-zinc-500"
       >
         <SwitchButton isSelected={selected} onToggle={setSelected} />
         <div className="bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl"></div>
-        <div className="w-full h-1 bg-neutral-500 mt-5 mb-9"></div>
-        <ExpandableColumns
-          items={experienceData}
-          isVisible={selected === "experience" && isMediumOrLarger}
-        />
-        <ExpandableColumns
-          items={educationData}
-          isVisible={selected === "education" && isMediumOrLarger}
-        />
+        <div className="w-full h-0.5 bg-zinc-500 mt-5 mb-9"></div>
 
-        <div id="carousel-mobile" className="md:hidden">
-          <MobileCarousel items={experienceData} isVisible={selected === "experience" && !isMediumOrLarger} />
-          <MobileCarousel items={educationData} isVisible={selected === "education" && !isMediumOrLarger} />
-        </div>
-        <div className="w-full h-1 bg-neutral-500 mt-9.5"></div>
-      </div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.8, duration: 0.5, ease: "easeInOut" }}
+        >
+          <ExpandableColumns
+            items={experienceData}
+            isVisible={selected === "experience" && isMediumOrLarger}
+          />
+          <ExpandableColumns
+            items={educationData}
+            isVisible={selected === "education" && isMediumOrLarger}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.8, duration: 0.5, ease: "easeInOut" }}
+          id="carousel-mobile"
+          className="md:hidden"
+        >
+          <MobileCarousel
+            items={experienceData}
+            isVisible={selected === "experience" && !isMediumOrLarger}
+          />
+          <MobileCarousel
+            items={educationData}
+            isVisible={selected === "education" && !isMediumOrLarger}
+          />
+        </motion.div>
+        <div className="w-full h-0.5 bg-zinc-500 mt-9.5"></div>
+      </motion.div>
     </div>
   );
 };
