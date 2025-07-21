@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import ExpEduComp from "./components/ExpEduComp";
 import Bento from "./components/Bento";
 import BlogSection from "./components/BlogSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Bento />
         <div className="p-10 bg-black"></div>
         <BlogSection />
+        <div className="p-10 bg-zinc-700"></div>
+        <Footer />
       </div>
     </>
   );

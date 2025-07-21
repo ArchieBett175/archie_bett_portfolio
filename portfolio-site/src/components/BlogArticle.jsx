@@ -10,7 +10,7 @@ const BlogArticle = ({ post }) => {
     });
   };
 
-  console.log(post);
+ 
 
   return (
     <motion.div
