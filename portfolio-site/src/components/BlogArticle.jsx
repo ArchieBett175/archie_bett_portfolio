@@ -1,6 +1,6 @@
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "motion/react";
-import Reveal from "./reveal";
+import Reveal from "./Reveal";
 
 const BlogArticle = ({ post }) => {
   const formatDate = (dateString) => {
