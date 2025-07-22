@@ -1,26 +1,64 @@
 import React from "react";
 import ConnectButtons from "./ConnectButtons";
+import { animate, motion } from "motion/react";
 
 const Hero = () => {
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: -40,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const childVariants = {
+    initial: {
+      opacity: 0,
+      y: -40,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="flex text-white">
+    <motion.div
+      variants={variants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      className="flex text-white"
+    >
       <div className="w-1/4"></div>
       <div className="flex-col">
-        <div className="flex">
+        <motion.div variants={childVariants} className="flex">
           <h1 className="font-roboto font-display text-5xl ">Hi I'm</h1>
           <h1 className="font-roboto font-display text-5xl ml-3.5 italic">
             Archie
           </h1>
-        </div>
-        <h1 className="font-roboto font-display text-5xl">
+        </motion.div>
+        <motion.h1 variants={childVariants} className="font-roboto font-display text-5xl">
           A Front-End Web Developer
-        </h1>
-        <p className="font-roboto opacity-40 mt-5">
+        </motion.h1>
+        <motion.p variants={childVariants} className="font-roboto text-zinc-500 mt-5 w-3/4 md:w-full">
           Recent Interactive Media Graduate Based In London, UK
-        </p>
+        </motion.p>
         <ConnectButtons />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,7 +7,23 @@ const ConnectButton = ({ icon, infoTag, marLeft }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className={`rotate-x-30 ${infoTag}But`}>
+    <motion.div
+      variants={{
+        initial: {
+          opacity: 0,
+          y: -40,
+        },
+        animate: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+            ease: "easeInOut",
+          },
+        },
+      }}
+      className={`rotate-x-30 ${infoTag}But relative`}
+    >
       <AnimatePresence>
         {showTooltip && (
           <motion.p
@@ -37,7 +53,7 @@ const ConnectButton = ({ icon, infoTag, marLeft }) => {
           {icon}
         </span>
       </li>
-    </div>
+    </motion.div>
   );
 };
 

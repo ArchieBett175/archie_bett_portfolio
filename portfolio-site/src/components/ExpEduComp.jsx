@@ -142,7 +142,7 @@ const ExpEduComp = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="h-15/16 md:w-3/4 w-10/11 flex-col place-items-center
-          rounded-[3rem] bg-gradient-to-b bg-zinc-800 border-2 border-zinc-500"
+          rounded-[3rem] bg-gradient-to-b bg-black"
       >
         <SwitchButton isSelected={selected} onToggle={setSelected} />
         <div className="bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl"></div>

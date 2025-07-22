@@ -11,16 +11,18 @@ function App() {
       <div className="flex-col background h-screen">
         <div className="h-1/12"></div>
         <NavBar />
-        <div className="h-1/6"></div>
-        <Hero />
-        <div className="h-1/6"></div>
-        <ExpEduComp />
-        <div className="p-10 bg-black"></div>
-        <Bento />
-        <div className="p-10 bg-black"></div>
-        <BlogSection />
-        <div className="p-10 bg-zinc-700"></div>
-        <Footer />
+        <div className="h-full">
+          <div className="h-1/6"></div>
+          <Hero />
+          <div className="h-1/6"></div>
+          <ExpEduComp />
+          <div className="p-10 bg-black"></div>
+          <Bento />
+          <div className="p-10 bg-black"></div>
+          <BlogSection />
+          <div className="p-10 bg-zinc-700"></div>
+          <Footer />
+        </div>
       </div>
     </>
   );

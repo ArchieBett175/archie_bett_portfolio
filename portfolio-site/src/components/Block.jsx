@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
-import { animate, motion } from "motion/react";
+import { animate, delay, motion, scale } from "motion/react";
 import TerrTieLogo from "../assets/TerraceTiesLogo.png";
 import CCCLogo from "../assets/cccLogo.png";
 import portfolioScrnShot from "../assets/portfolioScrnShot.png";
@@ -40,8 +40,9 @@ const Block = ({ className, ...rest }) => {
             type: "spring",
             stiffness: 100,
             damping: 15,
-          }
-        }
+            delay: 1.2,
+          },
+        },
       }}
       className={twMerge(
         "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6",
@@ -170,7 +171,16 @@ const ProjectLibBlock = () => {
 
 const AboutBlock = () => {
   return (
-    <Block className="col-span-12 text-3xl leading-snug">
+    <Block
+      initial={{ scale: 1.1, y: -40, opacity: 0.5 }}
+      animate={{
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        transition: { type: "spring", stiffness: 100, damping: 15, delay: 0 },
+      }}
+      className="col-span-12 text-3xl leading-snug"
+    >
       <h1 className="mb-3 font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 text-7xl ">
         Motivation
       </h1>
