@@ -41,6 +41,7 @@ const Hero = () => {
       whileInView="animate"
       viewport={{ once: true }}
       className="flex text-white"
+      id="hero"
     >
       <div className="w-1/4"></div>
       <div className="flex-col">
@@ -53,7 +54,7 @@ const Hero = () => {
         <motion.h1 variants={childVariants} className="font-roboto font-display text-5xl">
           A Front-End Web Developer
         </motion.h1>
-        <motion.p variants={childVariants} className="font-roboto text-zinc-500 mt-5 w-3/4 md:w-full">
+        <motion.p variants={childVariants} className="font-roboto text-zinc-400 mt-5 w-3/4 md:w-full">
           Recent Interactive Media Graduate Based In London, UK
         </motion.p>
         <ConnectButtons />

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { IoHome, IoDocument } from "react-icons/io5";
-import { FaInfoCircle } from "react-icons/fa";
+import { IoHome, IoDocument, IoChatboxEllipses, IoChatbubbleEllipses } from "react-icons/io5";
+import { FaHourglassEnd, FaInfoCircle } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa6";
 import NavElement from "./NavElement";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
@@ -30,29 +30,34 @@ const NavBar = () => {
       className="navbar fixed z-20 place-self-center"
     >
       <ul
-        className="flex justify-between justify-self-center w-60
+        className="flex justify-between justify-self-center w-70
           bg-gradient-to-r from-purple-500/30 via-red-500/30 to-yellow-500/30 
           p-4 rounded-4xl drop-shadow-xl"
       >
+        <NavElement icon={<IoChatbubbleEllipses className="size-7 text-white"/>} infoTag={"Contact"} marLeft={"ml-[-25px]"} dest={"#hero"} />
         <NavElement
-          icon={<IoHome className="size-7 text-white" />}
-          infoTag={"Home"}
-          marLeft={"ml-[-20px]"}
-        />
-        <NavElement
-          icon={<FaInfoCircle className="size-7 text-white" />}
-          infoTag={"About"}
-          marLeft={"ml-[-22px]"}
+          icon={<FaHourglassEnd className="size-7 text-white" />}
+          infoTag={"Experience"}
+          marLeft={"ml-[-35px]"}
+          dest={"#experience"}
         />
         <NavElement
           icon={<FaBriefcase className="size-7 text-white" />}
           infoTag={"Projects"}
           marLeft={"ml-[-28px]"}
+          dest={"#projects"}
+        />
+        <NavElement
+          icon={<FaInfoCircle className="size-7 text-white" />}
+          infoTag={"About"}
+          marLeft={"ml-[-22px]"}
+          dest={"#about"}
         />
         <NavElement
           icon={<IoDocument className="size-7 text-white " />}
           infoTag={"Blog"}
           marLeft={"ml-[-16px]"}
+          dest={"#blog"}
         />
       </ul>
     </motion.nav>

@@ -8,7 +8,8 @@ const BlogSection = () => {
   const { posts, loading, error } = useBlog();
 
   return (
-    <div className="bg-gradient-to-b from-black to-zinc-700 h-f text-zinc-100 flex-col flex text-xl font-medium items-center">
+    <div className="bg-gradient-to-b from-black to-zinc-700 h-f text-zinc-100 flex-col flex text-xl font-medium items-center"
+    id="blog">
       <div className="flex justify-center w-full" id="blog-header">
         <div className="md:w-3/4 w-full">
           <motion.div

@@ -4,10 +4,11 @@ import ExpEduComp from "./components/ExpEduComp";
 import Bento from "./components/Bento";
 import BlogSection from "./components/BlogSection";
 import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <div className="flex-col background h-screen">
         <div className="h-1/12"></div>
         <NavBar />
@@ -24,7 +25,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 

@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { useState } from "react";
 
-const ConnectButton = ({ icon, infoTag, marLeft }) => {
+const ConnectButton = ({ icon, infoTag, marLeft, dest }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
@@ -50,7 +50,9 @@ const ConnectButton = ({ icon, infoTag, marLeft }) => {
           className="flex h-full flex-col items-center justify-center
                       text-lg font-medium text-gray-100"
         >
-          {icon}
+          <a href={dest} target="_blank" rel="noopener noreferrer">
+            {icon}
+          </a>
         </span>
       </li>
     </motion.div>

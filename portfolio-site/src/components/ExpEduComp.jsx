@@ -143,6 +143,7 @@ const ExpEduComp = () => {
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="h-15/16 md:w-3/4 w-10/11 flex-col place-items-center
           rounded-[3rem] bg-gradient-to-b bg-black"
+        id="experience"
       >
         <SwitchButton isSelected={selected} onToggle={setSelected} />
         <div className="bg-gradient-to-b from-sky-600/20 via-sky-400/20 to-sky-50/20 backdrop-blur-2xl"></div>
@@ -151,8 +152,8 @@ const ExpEduComp = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.8, duration: 0.5, ease: "easeInOut" }}
+          viewport={{ once: true}}
+          transition={{ delay: 1, duration: 0.5, ease: "easeInOut" }}
         >
           <ExpandableColumns
             items={experienceData}

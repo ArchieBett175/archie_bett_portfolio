@@ -43,6 +43,7 @@ const Reveal = ({ children, width = "w-fit" }) => {
             right: 0,
             background: "#7c86ff",
             zIndex: 20,
+            opacity: 30
         }}
         
         />

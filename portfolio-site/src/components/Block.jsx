@@ -55,7 +55,10 @@ const Block = ({ className, ...rest }) => {
 
 const ProjectBlock = () => {
   return (
-    <Block className="col-span-12 row-span-2 md:col-span-6 bg-gradient-to-r from-green-900 via-emerald-800 to-green-800">
+    <Block
+      className="col-span-12 row-span-2 md:col-span-6 bg-gradient-to-r from-green-900 via-emerald-800 to-green-800"
+      id="projects"
+    >
       <img
         src={TerrTieLogo}
         alt="avatar"
@@ -180,6 +183,7 @@ const AboutBlock = () => {
         transition: { type: "spring", stiffness: 100, damping: 15, delay: 0 },
       }}
       className="col-span-12 text-3xl leading-snug"
+      id="about"
     >
       <h1 className="mb-3 font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 text-7xl ">
         Motivation
@@ -225,7 +229,11 @@ const GridBlock = () => {
       className="col-span-12 text-3xl md:col-span-6 relative"
       whileHover={{ rotate: "-.5deg", scale: 1.07 }}
     >
-      <a href="https://github.com/ArchieBett175" target="_blank">
+      <a
+        href="https://github.com/ArchieBett175"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className="bg-slate-700 border-4 border-slate-700 rounded-3xl w-fit absolute right-4 top-3">
           <FaGithub className="" />
         </div>
@@ -335,7 +343,11 @@ const SpotifyBlock = () => {
       whileHover={{ rotate: "-.5deg", scale: 1.07 }}
     >
       {displayTrack ? (
-        <a href={displayTrack.trackLink} target="_blank">
+        <a
+          href={displayTrack.trackLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="flex">
             <div className="bg-slate-700 absolute top-4 right-6 border-4 border-slate-700 rounded-3xl">
               <FaSpotify className="" />
