@@ -1,8 +1,16 @@
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "motion/react";
 import Reveal from "./Reveal";
+import { useState } from "react";
+import Modal from "./modal/Modal";
+import { X } from "lucide-react";
+import BlogCard from "./modal/BlogCard";
 
 const BlogArticle = ({ post }) => {
+  const [isModelOpen, setIsModelOpen] = useState(false);
+
+  const postSlug = post.slug
+
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-GB", {
       year: "numeric",
@@ -17,6 +25,7 @@ const BlogArticle = ({ post }) => {
         className="flex flex-col gap-5 hover:cursor-pointer my-5 md:w-full w-3/4"
         whileHover="hover"
         initial="initial"
+        onClick={() => setIsModelOpen(true)}
       >
         <div className="h-[1px] bg-zinc-500 rounded-full" />
 
@@ -52,6 +61,26 @@ const BlogArticle = ({ post }) => {
           </div>
         </div>
       </motion.div>
+      <Modal isOpen={isModelOpen} onClose={() => setIsModelOpen(false)}>
+        <div className="">
+          <button
+            onClick={() => setIsModelOpen(false)}
+            className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+          >
+            <X size={24} />
+          </button>
+
+          <div className="p-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                Your Project
+              </h2>
+              <p className="text-gray-600">Here 😊</p>
+            </div>
+            <BlogCard slug={postSlug}/>
+          </div>
+        </div>
+      </Modal>
     </Reveal>
   );
 };
