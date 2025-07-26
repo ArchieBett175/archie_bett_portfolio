@@ -37,7 +37,7 @@ const Modal = ({ isOpen, onClose, children }) => {
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-zinc-400 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto">
+            <div className="bg-zinc-800/80 rounded-lg shadow-2xl md:max-w-4xl w-full max-h-[90vh] overflow-auto">
                 {children}
             </div>
           </motion.div>

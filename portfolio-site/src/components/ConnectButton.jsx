@@ -38,11 +38,19 @@ const ConnectButton = ({ icon, infoTag, marLeft, dest }) => {
           </motion.p>
         )}
       </AnimatePresence>
-      <li
-        className="h-15 w-15 cursor-pointer select-none rounded-lg
-                    border-b-2 border-zinc-700 bg-zinc-600 transition-all 
-                    duration-150 [box-shadow:0_10px_0_0_#414145] active:translate-y-2
-                    active:border-b-0 active:[box-shadow:0_0px_0_0_#414145, 0_0px_0_0_#38383d]"
+      <motion.li
+        className="h-15 w-15 cursor-pointer select-none rounded-lg bg-zinc-600"
+        initial={{
+          y: 0,
+          borderBottom: "2px solid #52525b",
+          boxShadow: "0 10px 0 0 #414145",
+        }}
+        whileHover={{
+          y: 8,
+          borderBottom: "0px solid #52525b",
+          boxShadow: "0 2px 0 0 #414145",
+        }}
+        transition={{ duration: 0.1 }}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
       >
@@ -54,7 +62,7 @@ const ConnectButton = ({ icon, infoTag, marLeft, dest }) => {
             {icon}
           </a>
         </span>
-      </li>
+      </motion.li>
     </motion.div>
   );
 };

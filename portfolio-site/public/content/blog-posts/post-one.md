@@ -1,14 +1,17 @@
 
-# My First Blog Post
+# Seeing The World and showcasing it
 
-Welcome to my blog! This is my first post where I'll be sharing my thoughts and experiences.
+*Published on January 15, 2024*
 
-## Why I Started Blogging
+After my graduation i was desperate to see the world and after getting a taste for europe from various lads holidays and small 
+city breaks i though theire was no better place to start.
 
-I decided to start blogging because:
-- I want to document my learning journey
-- Share knowledge with the community
-- Improve my writing skills
+---
+
+## Destination Unknown
+
+<img src="/images/sydney_opera_house.jpg" alt="Sydney Opera House" class="rounded-lg size-102 mx-auto mt-5"/>
+
 
 ## What You Can Expect
 

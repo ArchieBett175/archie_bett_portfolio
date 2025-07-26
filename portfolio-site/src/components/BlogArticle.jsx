@@ -22,7 +22,7 @@ const BlogArticle = ({ post }) => {
   return (
     <Reveal width="w-full">
       <motion.div
-        className="flex flex-col gap-5 hover:cursor-pointer my-5 md:w-full w-3/4"
+        className="flex flex-col gap-5 hover:cursor-pointer my-5 w-full max-w-sm md:max-w-none mx-auto"
         whileHover="hover"
         initial="initial"
         onClick={() => setIsModelOpen(true)}
@@ -33,7 +33,7 @@ const BlogArticle = ({ post }) => {
           <motion.img
             src={post.coverImage}
             alt="Image for Blog"
-            className="size-60 md:size-40 rounded-2xl border-zinc-700 border-2 place-content-center shadow-md"
+            className="size-60 md:size-40 rounded-2xl border-zinc-700 border-2 place-content-center shadow-md ml-3"
             variants={{
               initial: { scale: 1 },
               hover: { scale: 1.1 },
@@ -65,18 +65,12 @@ const BlogArticle = ({ post }) => {
         <div className="">
           <button
             onClick={() => setIsModelOpen(false)}
-            className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+            className="absolute top-4 right-4 text-gray-50 hover:text-gray-700 z-10"
           >
             <X size={24} />
           </button>
 
           <div className="p-6">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                Your Project
-              </h2>
-              <p className="text-gray-600">Here 😊</p>
-            </div>
             <BlogCard slug={postSlug}/>
           </div>
         </div>

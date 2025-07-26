@@ -40,7 +40,6 @@ const Block = ({ className, ...rest }) => {
             type: "spring",
             stiffness: 100,
             damping: 15,
-            delay: 1.2,
           },
         },
       }}
