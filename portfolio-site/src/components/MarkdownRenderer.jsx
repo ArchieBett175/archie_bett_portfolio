@@ -5,7 +5,7 @@ import rehypeRaw from 'rehype-raw';
 
 export default function MarkdownRenderer({ content, className = "" }) {
   return (
-    <div className={`prose prose-lg max-w-none ${className}`}>
+    <div className={`prose prose-lg max-w-none prose-p:text-gray-50 prose-p:leading-relaxed prose-p:mb-4${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight, rehypeRaw]}
@@ -37,11 +37,6 @@ export default function MarkdownRenderer({ content, className = "" }) {
           ),
 
           // Paragraph and text
-          p: ({ children }) => (
-            <p className="mb-4 leading-relaxed text-gray-50 text-lg">
-              {children}
-            </p>
-          ),
 
           // Lists
           ul: ({ children }) => (
