@@ -3,7 +3,7 @@
         {
             "slug": "post-one",
             "title": "Seeing the world, and showcasing it",
-            "date": "2025-07-21",
+            "date": "2025-07-28",
             "excerpt": "My story of travelling around europe and Australia and how i want to show it to people...",
             "coverImage": "/images/sydney_opera_house.jpg",
             "readtime" : 5,
@@ -12,7 +12,7 @@
         {
             "slug": "post-two",
             "title": "The Lifecycle after Graduating from tech",
-            "date": "2025-07-21",
+            "date": "2025-07-28",
             "excerpt": "How i have tackled the gruling process of getting a grad job...",
             "coverImage": "/images/graduation.jpg",
             "readtime": 5,
@@ -21,7 +21,7 @@
         {
             "slug": "post-three",
             "title": "My journey in creating digital media",
-            "date": "2025-07-22",
+            "date": "2025-07-29",
             "excerpt": "A Showcase of my digital media creations ",
             "coverImage": "/images/digital_media_example.png",
             "readtime": 5,

@@ -28,6 +28,7 @@ export function useBlog() {
     }
   };
 
+
   const loadPostContent = async (slug) => {
     try {
       const response = await fetch(`/content/blog-posts/${slug}.md`);

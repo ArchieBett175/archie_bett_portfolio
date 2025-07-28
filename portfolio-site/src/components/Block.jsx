@@ -22,6 +22,7 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { SiAdobe, SiBlender, SiKotlin, SiPostgresql } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Block = ({ className, ...rest }) => {
   return (
@@ -71,12 +72,12 @@ const ProjectBlock = () => {
         year university project making use of API calls, google firebase,
         geolocation services etc.
       </p>
-      <a
-        href="#"
+      <Link
+        to={"/projects/terraceties"}
         className="flex items-center gap-1 text-red-300 justify-self-end hover:underline"
       >
         Find out More <FiArrowRight />
-      </a>
+      </Link>
     </Block>
   );
 };
@@ -97,16 +98,17 @@ const ProjectLibBlock = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <motion.a
-          href="#"
-          className="grid h-full items-end opacity-0"
-          whileHover={{
-            opacity: "100%",
-            scale: 1.1,
-          }}
-        >
-          <FiArrowRight className="text-white size-10 rotate-180" />
-        </motion.a>
+        <Link to={"/projects/codecaffinecollapse"}>
+          <motion.div
+            className="grid h-full items-end opacity-0"
+            whileHover={{
+              opacity: "100%",
+              scale: 1.1,
+            }}
+          >
+            <FiArrowRight className="text-white size-10 rotate-180" />
+          </motion.div>
+        </Link>
       </Block>
 
       <Block
@@ -122,13 +124,15 @@ const ProjectLibBlock = () => {
           scale: 1.1,
         }}
       >
-        <motion.a
-          href="#"
-          className="grid h-full items-end justify-end opacity-0"
-          whileHover={{ opacity: "100%", scale: 1.1 }}
-        >
-          <FiArrowRight className="size-10" />
-        </motion.a>
+        <Link to={"/projects/portfolio"}>
+          <motion.div
+            href="#"
+            className="grid h-full items-end justify-end opacity-0"
+            whileHover={{ opacity: "100%", scale: 1.1 }}
+          >
+            <FiArrowRight className="size-10" />
+          </motion.div>
+        </Link>
       </Block>
       <Block
         whileHover={{
@@ -142,13 +146,15 @@ const ProjectLibBlock = () => {
             Under Construction
           </h1>
         </div>
-        <motion.a
-          href="#"
-          className="flex h-full justify-end items-end opacity-0"
-          whileHover={{ opacity: "100%", scale: 1.1 }}
-        >
-          <FiArrowRight className="text-black size-10" />
-        </motion.a>
+        <Link to={"/projects/under-construction"}>
+          <motion.div
+            href="#"
+            className="flex h-full justify-end items-end opacity-0"
+            whileHover={{ opacity: "100%", scale: 1.1 }}
+          >
+            <FiArrowRight className="text-black size-10" />
+          </motion.div>
+        </Link>
       </Block>
       <Block
         className="col-span-6 bg-gradient-to-l from-zinc-800 to-zinc-600 md:col-span-3 p-2 justify-center relative"
@@ -159,13 +165,15 @@ const ProjectLibBlock = () => {
             Explore All
           </h1>
         </div>
-        <motion.a
-          href="#"
-          className="grid h-full justify-start items-end opacity-0"
-          whileHover={{ opacity: "100%", scale: 1.1 }}
-        >
-          <FiArrowRight className="text-white size-10 rotate-180" />
-        </motion.a>
+        <Link to={"/projects"}>
+          <motion.div
+            href="#"
+            className="grid h-full justify-start items-end opacity-0"
+            whileHover={{ opacity: "100%", scale: 1.1 }}
+          >
+            <FiArrowRight className="text-white size-10 rotate-180" />
+          </motion.div>
+        </Link>
       </Block>
     </>
   );

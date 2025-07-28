@@ -58,8 +58,8 @@ const BlogCard = ({ slug }) => {
     if (error || !post) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-        <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+        <h1 className="text-3xl font-bold text-gray-50 mb-4">Post Not Found</h1>
+        <p className="text-gray-300 mb-8">The blog post you're looking for doesn't exist.</p>
       </div>
     );
   }

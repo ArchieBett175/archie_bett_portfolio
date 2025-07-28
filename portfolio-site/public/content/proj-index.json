@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "title": "Terrace Ties",
+            "link": "/projects/terraceties",
+            "excerpt": "The Creation of a standalone footballing app for the lower league football community",
+            "tags": ["Kotlin", "Android Studio", "Firebase"],
+            "coverImage": "/images/project-images/TerraceTiesLogo.png",
+            "published": true
+        },
+        {
+            "title": "Code Caffine Collapse",
+            "link": "/projects/codecaffinecollapse",
+            "excerpt": "A group 3D unity project, based around the ruthless cycle modern day developers face",
+            "tags": ["Unity", "C#", "Blender", "Photoshop", "Github"],
+            "coverImage": "/images/project-images/cccLogo.png",
+            "published": true
+        },
+        {
+            "title": "My Portfolio Site",
+            "link": "/projects/portfolio", 
+            "excerpt": "The creation of this site, how i learnt the technologies and overcame the challanges",
+            "tags": ["React", "JS", "html", "tailwindcss", "node.js", "Motion"],
+            "coverImage": "/images/project-images/portfolioScrnShot.png",
+            "published": true
+        },
+        {
+            "title": "Graphic Design Projects",
+            "link": "/projects/graphic-design-projects", 
+            "excerpt": "A showcase of the digital media i have produced",
+            "tags": ["Adobe Creative Suite"],
+            "coverImage": "/images/digital_media_example.png",
+            "published": false
+        }
+    ]
+}

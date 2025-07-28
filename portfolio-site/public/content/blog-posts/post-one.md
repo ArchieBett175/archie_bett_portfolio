@@ -1,7 +1,7 @@
 
 # Seeing The World and showcasing it
 
-*Published on January 15, 2024*
+*Published on July 28, 2025*
 
 Like many grads in this tricky market, I was met with a very repetitive question on the day of my graduation:
 **What next?**
@@ -48,25 +48,43 @@ My time in Europe was amazing. I would not say I found myself, because I have ne
 
 That is something I carry with me today in this challenging job market. It is something I carry with me when I am learning a new skill or meeting new people. And it is something I know will stay with me for life.
 
-
-
-In future posts, I'll cover topics like:
-
-1. **Web Development** - Tips, tricks, and tutorials
-2. **Personal Projects** - Behind-the-scenes looks at my work
-3. **Learning Resources** - Books, courses, and tools I recommend
-
-```javascript
-// Here's a code example
-function greetReader() {
-  console.log("Thanks for reading my blog!");
-}
-```
-
-## Conclusion
-
-Thanks for reading! Stay tuned for more content.
+<img src="images/budapest_and_friends.JPG" alt="group of friends on a boat infront of Budapest Parliment House" class="rounded-lg w-100 mx-auto shadow-lg"/>
 
 ---
 
-*Published on January 15, 2024*
+### The other side of the world
+
+After months of saving and waiting, I finally boarded my first 13-hour China Eastern flight from London Heathrow to Shanghai Pudong Airport. After a short layover and another 11-hour flight, I landed in Sydney. I had completely lost track of what day it was. I left on a Tuesday and arrived on a Thursday, missing an entire day of my life.
+
+At the arrivals gate, I met up with my girlfriend after eight months apart. In that moment, everything made sense. I found my purpose. Everything I had done over the last eight months—the gruelling hours, driving through the rain and dark—I had finally reached my "it was all worth it" moment. It felt similar to the day I graduated.
+
+What followed were two months of living a life that had only ever existed in my imagination while I sat 17,000 kilometers away in the comfort of my own home. I had pushed myself once again beyond my comfort zone. I left behind everything familiar to pursue a dream I had been holding on to since I was a child.
+
+From travelling and campervanning around the South Island of New Zealand to jumping out of a plane from 15,000 feet, I had achieved so much on that trip. Coming back felt like more of a shock and a moment of realisation than when I returned from Europe.
+
+Sometimes I sit and reflect on how much I miss it. The relaxed attitude, the sense of freedom, and maybe most of all, the escapism. I love my family deeply, as most do, but there is something about being so far away—not just in distance, but in time—that makes you truly appreciate those phone calls and FaceTimes.
+
+These moments made me realise something important. The harsh reality is that no one else will ever have the same epic experience that I had at the start of this year. And that got me thinking.
+
+<img src="/images/new_zealand_landscape.jpg" alt="A Photo of the New Zealand Landscape at Arthur's Pass" class="rounded-lg w-100 mx-auto shadow-lg"/>
+
+---
+
+### Showcasing Memories
+
+I like to think a lot about how anyone's life could be a movie if they had a camera crew and a producer following them around. So why not make your own movie? Show the parts you want to show. Everyone enjoys a bit of attention in one way or another. People love the questions, the curiosity, the interest in their lives.
+
+Having always been passionate about content creation and making videos for others to enjoy, I saw this as the perfect opportunity to create something I could be proud of. A way to look back and show the world how I experienced my three months in Australia.
+
+Please take the time to watch the video below and let me know what you think. Thank you so much for reading this. It is something I have wanted to share for a while but never had the right outlet for.
+
+<video width="320" height="240" class="mx-auto rounded-lg shadow-xl" controls>
+  <source src="/images/trip_down_under.mp4" type="video/mp4">
+  <source src="/images/trip_down_under.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+---
+
+*Written and published by Archie Bett*
+

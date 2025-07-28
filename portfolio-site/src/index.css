@@ -19,6 +19,21 @@
     radial-gradient(at 92% 4%, hsla(235, 89%, 78%, 1) 0px, transparent 50%),
     radial-gradient(at 90% 2%, hsla(326, 73%, 70%, 1) 0px, transparent 50%),
     radial-gradient(at 62% 0%, hsla(250, 64%, 79%, 0.49) 0px, transparent 50%),
+    radial-gradient(at 15% 0%, rgb(252, 54, 219) 0px, transparent 50%);
+}
+
+.background_two {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: 
+    linear-gradient(to bottom, transparent 0%, transparent 1%, black 37%),
+    radial-gradient(
+      at 9% 0%,
+      hsla(357, 77%, 71%, 0.5) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 92% 4%, hsla(235, 89%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 90% 2%, hsla(326, 73%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 62% 0%, hsla(250, 64%, 79%, 0.49) 0px, transparent 50%),
     radial-gradient(at 15% 0%, hsla(310, 97%, 60%, 1) 0px, transparent 50%);
 }
 

@@ -9,8 +9,9 @@ import chancellorsLogo from "../assets/chancellors_sch_logo.png";
 import SwitchButton from "./switchButton";
 import ExpandableColumns from "./ExpandableColumns/ExpandableColumns";
 import "../index.css";
-import MobileCarousel from "./ExpandableColumns/MobileCarousel";
+import Carousel from "./Carousel";
 import { HandHelpingIcon } from "lucide-react";
+import MobileCarouselItem from "./ExpandableColumns/MobileCarouselItem";
 
 const experienceData = [
   {
@@ -173,13 +174,15 @@ const ExpEduComp = () => {
           id="carousel-mobile"
           className="md:hidden"
         >
-          <MobileCarousel
+          <Carousel
             items={experienceData}
             isVisible={selected === "experience" && !isMediumOrLarger}
+            carouselItem={MobileCarouselItem}
           />
-          <MobileCarousel
+          <Carousel
             items={educationData}
             isVisible={selected === "education" && !isMediumOrLarger}
+            carouselItem={MobileCarouselItem}
           />
         </motion.div>
         <div className="w-full h-0.5 bg-zinc-500 mt-9.5"></div>

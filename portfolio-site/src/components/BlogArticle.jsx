@@ -11,6 +11,7 @@ const BlogArticle = ({ post }) => {
 
   const postSlug = post.slug
 
+
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-GB", {
       year: "numeric",

@@ -5,7 +5,7 @@ import rehypeRaw from 'rehype-raw';
 
 export default function MarkdownRenderer({ content, className = "" }) {
   return (
-    <div className={`prose prose-lg max-w-none prose-p:text-gray-50 prose-p:leading-relaxed prose-p:mb-4${className}`}>
+    <div className={`prose prose-lg max-w-none prose-p:text-gray-50 prose-p:leading-relaxed prose-p:mb-2${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight, rehypeRaw]}
@@ -17,7 +17,7 @@ export default function MarkdownRenderer({ content, className = "" }) {
             </h1>
           ),
           h2: ({ children }) => (
-            <h2 className="text-3xl font-semibold mb-1 text-gray-50 mt-1">
+            <h2 className="text-3xl font-semibold mb-8 text-gray-50">
               {children}
             </h2>
           ),
@@ -31,7 +31,7 @@ export default function MarkdownRenderer({ content, className = "" }) {
             <img
               src={src}
               alt={alt}
-              className="rounded-lg shadow-md mx-auto my-6 max-w-full h-auto"
+              className="rounded-lg shadow-md max-w-full h-auto"
               {...props}
             />
           ),
