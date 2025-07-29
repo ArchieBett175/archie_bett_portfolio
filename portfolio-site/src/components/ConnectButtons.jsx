@@ -7,10 +7,6 @@ import { useState } from "react";
 import ConnectButton from "./ConnectButton";
 
 const ConnectButtons = () => {
-  const [showGitTooltip, setShowGitTooltip] = useState(false);
-  const [showLinkdinTooltip, setShowLinkdinTooltip] = useState(false);
-  const [showMailTooltip, setShowMailTooltip] = useState(false);
-  const [showCVTooltip, setShowCVTooltip] = useState(false);
 
   return (
     <motion.div

@@ -78,11 +78,9 @@ Having always been passionate about content creation and making videos for other
 
 Please take the time to watch the video below and let me know what you think. Thank you so much for reading this. It is something I have wanted to share for a while but never had the right outlet for.
 
-<video width="320" height="240" class="mx-auto rounded-lg shadow-xl" controls>
-  <source src="/images/trip_down_under.mp4" type="video/mp4">
-  <source src="/images/trip_down_under.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
+<iframe width="300" height="520" class="mx-auto"
+src="https://www.youtube.com/embed/YSeUHUQGEs8">
+</iframe>
 
 ---
 
