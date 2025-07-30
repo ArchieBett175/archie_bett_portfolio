@@ -6,34 +6,39 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
 const Projects = () => {
-    const [projects, setProjects] = useState([])
-    const [loading, setLoading] = useState(false)
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-    const loadProjects = async () => {
-        try {
-            const response = await fetch("/content/proj-index.json");
-            if (!response.ok) throw new Error("Failed to Load Project");
+  const loadProjects = async () => {
+    try {
+      const response = await fetch("/content/proj-index.json");
+      if (!response.ok) throw new Error("Failed to Load Project");
 
-            const data = await response.json()
-            const publishedProj = data.projects.filter((project) => project.published)
+      const data = await response.json();
+      const publishedProj = data.projects.filter(
+        (project) => project.published
+      );
 
-            setProjects(publishedProj)
-            
-        }catch (err){
-            console.Error("Error fetching project info", err);
-        }
-    };
+      setProjects(publishedProj);
+    } catch (err) {
+      console.Error("Error fetching project info", err);
+    }
+  };
 
-    useEffect(()=> {    
-        loadProjects();
-    }, [])
+  useEffect(() => {
+    loadProjects();
+  }, []);
 
   return (
     <>
       <div className="h-fit background_two bg-black w-full ">
-        <div className="w-full items-center flex flex-col gap-10">
+        <div className="w-full items-center flex flex-col gap-10 text-[#9f9f9f]">
           <Link to={"/"} className="place-self-start">
-            <motion.div initial={{ scale: 1, color: "#e4e4e7"}} whileHover={{ scale: 1.1, color: "#ffffff"}} className="text-4xl text-zinc-200 p-10 flex gap-2">
+            <motion.div
+              initial={{ scale: 1, color: "#9f9f9f" }}
+              whileHover={{ scale: 1.1, color: "#ffffff" }}
+              className="text-4xl text-zinc-200 p-10 flex gap-2"
+            >
               <FiArrowLeft />
               <h1 className="mt-0.5 text-2xl">Back To Home</h1>
             </motion.div>
