@@ -119,7 +119,6 @@ const newImages = [
   },
 ];
 
-//to-do, find images and add them to array to be scrolled through by carousel fialise Terrace ties page, also change video format of trip down under to youtube
 
 const TerraceTies = () => {
   return (
@@ -337,7 +336,7 @@ const TerraceTies = () => {
           </div>
           <hr />
           <p className="text-lg">
-            Thank you for being so interested in my work, please contact me{" "}
+            Thank you for being so interested in my work, if you would like to contact me you may do so{" "}
             <span className="text-blue-500 underline hover:text-amber-300">
               {" "}
               <Link to={"/"}> here</Link>

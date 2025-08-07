@@ -31,7 +31,7 @@ const Carousel = ({ isVisible, items, carouselItem }) => {
 
   return (
     <div
-      className={`w-full max-w-md mx-auto ${
+      className={`w-full max-w-2xl mx-auto ${
         isVisible ? "opacity-100 relative" : "opacity-0 absolute top-0 -z-10"
       }`}
       onTouchStart={(e) => {
