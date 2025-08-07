@@ -12,10 +12,12 @@ Getting a job was the obvious option, but it was something I felt I might always
 It’s a common path for many grads. Now, after finishing my travels, I think I’m ready to get that grown-up job. I like to reflect and look back, to tell my stories and give people a glimpse of the experiences I had while travelling through so many different cultures and across so many landscapes.
 I suppose that’s why I’m writing here today: to showcase some of the things I got up to. So take a read.
 
-<p style="font-style: italic; color: #848c9d;">
-“If I'm an advocate for anything, it's to move. As far as you can, as much as you can. Across the ocean, or simply across the river. The extent to which you can walk in someone else's shoes or at least eat their food, it's a plus for everybody.</p>
-<p style="font-style: italic; color: #848c9d;">Open your mind, get up off the couch, move."</p>
-<p style="font-style: italic; color: #848c9d; margin-top: -10px">― Anthony Bourdain </p>
+
+*“If I'm an advocate for anything, it's to move. As far as you can, as much as you can. Across the ocean, or simply across the river. The extent to which you can walk in someone else's shoes or at least eat their food, it's a plus for everybody.*
+
+*Open your mind, get up off the couch, move."*
+
+*― Anthony Bourdain*
 
 
 ---

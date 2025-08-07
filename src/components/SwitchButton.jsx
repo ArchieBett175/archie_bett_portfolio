@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const SwitchButton = ({ isSelected, onToggle }) => {
 
   return (
-    <div className="relative flex w-fit bg-black h-fit mt-6 rounded-full">
+    <div className="relative flex w-fit bg-black h-fit mt-6 rounded-full self-center mx-auto">
       <div
         className="px-3 py-2 rounded-full z-10 relative cursor-pointer"
         onClick={() => onToggle("experience")}

@@ -8,7 +8,7 @@ Naturally, when my university football team needed a Social Media Manager, they 
 
 ---
 
-## How do i remove background from an image?
+## How do I remove background from an image?
 
 When I was in secondary school, I was absolutely obsessed with YouTube and wanted to become a YouTuber when I was older. I created my own channel and named it Galicate, inspired by my favourite YouTuber, Syndicate, and my love for Galaxy chocolate bars. It made perfect sense in my head.
 
@@ -21,7 +21,7 @@ I watched countless videos on how to become a successful YouTuber. One in partic
 
 You could definitely argue that my style got worse, but I was learning. I felt my videos became more engaging. Maybe I was wrong, but that was how it felt at the time. I was learning the basics using an open-source software called GIMP, which allowed me to experiment with these tools in a free and cost-effective way.
 
-## How do i remove background in photoshop?
+## How do I remove background in photoshop?
 
 My YouTube climb to stardom faded as I reached the end of my school years—in other words, it completely died off. Now it’s just something I mention at parties while showing people the videos. But my passion for creating good-looking things never went away. I have always noticed the little details when visiting websites or seeing marketing campaigns, and to this day, I believe I could do a better job.
 

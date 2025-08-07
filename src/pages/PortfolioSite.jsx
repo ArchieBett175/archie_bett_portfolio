@@ -62,7 +62,7 @@ const PortfolioSite = () => {
             </p>
             <p>
               It has motivated me to develop bigger and better things and try my
-              hand at ai integration into web designs. It has also given me a
+              hand at AI integration into web designs. It has also given me a
               taste of backend development with the use of node.js, i have been
               able to get some raw data through the spotify API and present it
               in a cool way.

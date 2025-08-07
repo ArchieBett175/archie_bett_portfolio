@@ -27,13 +27,13 @@ const BlogSection = () => {
             </div>
           </motion.div>
           <div className="flex flex-col my-10 md:mx-15 mx-10 gap-4">
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row justify-between">
               <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: "all" }}
-                className="wrap-anywhere w-2/4 md:text-5xl text-3xl"
+                className="wrap-anywhere md:w-2/4 w-full md:text-5xl text-3xl mb-5 md:mb-0"
               >
                 <h1>Sharing My Thoughts On the Processes</h1>
               </motion.div>
@@ -44,7 +44,7 @@ const BlogSection = () => {
                   transition={{ duration: 0.1, ease: "easeInOut" }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: "all" }}
-                  className="cursor-pointer border border-zinc-500 rounded-full md:px-10 px-4 py-3 h-fit place-self-center flex items-center opacity-65"
+                  className="cursor-pointer border border-zinc-500 md:rounded-full rounded-4xl md:px-10 px-2 py-3 h-fit place-self-center flex items-center opacity-65 justify-center"
                 >
                   <div className="">Explore all</div>
                   <FiArrowRight className="ml-5 opacity-65" />

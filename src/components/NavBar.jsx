@@ -27,7 +27,7 @@ const NavBar = () => {
       variants={{ visible: { y: 20 }, hidden: { y: "-200%" } }}
       transition={{ duration: 0.35, ease: "easeInOut"}}
       animate={hidden ? "hidden" : "visible"}
-      className="navbar fixed z-20 place-self-center"
+      className="navbar fixed z-20 top-4 left-1/2 transform -translate-x-1/2"
     >
       <ul
         className="flex justify-between justify-self-center w-70

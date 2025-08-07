@@ -142,7 +142,7 @@ const ProjectLibBlock = () => {
         className="col-span-6 bg-gradient-to-r from-zinc-50 to-zinc-400 md:col-span-3 p-2 justify-center relative"
       >
         <div className="absolute left-0 right-1 bottom-[30%] md:bottom-[43%]">
-          <h1 className="font-medium text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 text-xl text-center">
+          <h1 className="font-medium text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 md:text-xl text-md text-center">
             Under Construction
           </h1>
         </div>
@@ -161,7 +161,7 @@ const ProjectLibBlock = () => {
         whileHover={{ rotate: "2.5deg", scale: 1.1 }}
       >
         <div className="absolute left-0 right-2 bottom-[30%] md:bottom-[43%]">
-          <h1 className="font-medium text-gradient bg-gradient-to-r from-sky-400 via-blue-300 to-cyan-300 text-xl text-center">
+          <h1 className="font-medium text-gradient bg-gradient-to-r from-sky-400 via-blue-300 to-cyan-300 md:text-xl text-md text-center">
             Explore All
           </h1>
         </div>
@@ -192,7 +192,7 @@ const AboutBlock = () => {
       className="col-span-12 text-3xl leading-snug"
       id="about"
     >
-      <h1 className="mb-3 font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 text-7xl ">
+      <h1 className="mb-3 font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 md:text-7xl text-6xl ">
         Motivation
       </h1>
       <p>
@@ -278,7 +278,7 @@ const SpotifyBlock = () => {
   async function fetchLastPlayed() {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/my-recently-played"
+        "/api/spotify-my-recently-played"
       );
       const data = await response.json();
       let dArtists = data.items[0].track.artists;
@@ -298,7 +298,7 @@ const SpotifyBlock = () => {
     async function fetchCurrentlyPlaying() {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/my-currently-playing"
+          "/api/spotify-my-currently-playing"
         );
         const data = await response.json();
         if (data.is_playing) {
@@ -403,7 +403,7 @@ const TechStackBlock = () => {
   return (
     <Block className="col-span-12 text-3xl w-full overflow-hidden">
       <div className="flex max-w-6xl mx-auto items-center w-full">
-        <h1 className="font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 text-4xl whitespace-nowrap text-center mb-3">
+        <h1 className="font-semibold text-gradient bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-800 md:text-4xl text-2xl whitespace-nowrap text-center mb-3">
           Tech Stack
         </h1>
 

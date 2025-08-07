@@ -168,13 +168,13 @@ const TerraceTies = () => {
           <div className="text-lg flex flex-col gap-5 leading-8">
             <p>
               My Application was created using android studio and Kotlin, whilst
-              i completed an initial styling and working app, a lot of work has
+              I completed an initial styling and working app, a lot of work has
               gone on since to ensure that my app was up to my specification and
-              works like a charm i am still yet to implement the new UI into the
+              works like a charm I am still yet to implement the new UI into the
               app but it has been designed and perfected on Figma.
             </p>
             <p>
-              On this page i will walk you through my process and showcase some
+              On this page I will walk you through my process and showcase some
               images from the final piece.
             </p>
             <p>

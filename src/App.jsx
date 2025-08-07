@@ -4,7 +4,7 @@ import TerraceTies from "./pages/TerraceTies";
 import CodeCaffineCollapse from "./pages/CodeCaffineCollapse";
 import PortfolioSite from "./pages/PortfolioSite";
 import CurrentlyWorking from "./pages/CurrentlyWorking";
-import Projects from "./pages/projects";
+import Projects from "./pages/Projects";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogList from "./pages/BlogList";
 

@@ -6,7 +6,7 @@ import asdaLogo from "../assets/asda-logo.png";
 import welcomeBreakLogo from "../assets/Welcome_Break_logo.svg";
 import yorkLogo from "../assets/uni_york_logo.png";
 import chancellorsLogo from "../assets/chancellors_sch_logo.png";
-import SwitchButton from "./switchButton";
+import SwitchButton from "./SwitchButton";
 import ExpandableColumns from "./ExpandableColumns/ExpandableColumns";
 import "../index.css";
 import Carousel from "./Carousel";

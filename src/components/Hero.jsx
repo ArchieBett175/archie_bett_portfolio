@@ -46,12 +46,12 @@ const Hero = () => {
       <div className="w-1/4"></div>
       <div className="flex-col">
         <motion.div variants={childVariants} className="flex">
-          <h1 className="font-roboto font-display text-5xl ">Hi I'm</h1>
-          <h1 className="font-roboto font-display text-5xl ml-3.5 italic">
+          <h1 className="font-roboto font-display md:text-5xl text-4xl ">Hi I'm</h1>
+          <h1 className="font-roboto font-display md:text-5xl text-4xl ml-3.5 italic">
             Archie
           </h1>
         </motion.div>
-        <motion.h1 variants={childVariants} className="font-roboto font-display text-5xl">
+        <motion.h1 variants={childVariants} className="font-roboto font-display md:text-5xl text-4xl">
           A Front-End Web Developer
         </motion.h1>
         <motion.p variants={childVariants} className="font-roboto text-zinc-400 mt-5 w-3/4 md:w-full">
