@@ -4,10 +4,13 @@ import ExpEduComp from "../components/ExpEduComp";
 import Bento from "../components/Bento";
 import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
+import BgImage from "../components/BgImage";
+
 
 const Landing = () => {
+
   return (
-    <div className="flex-col background h-screen">
+    <BgImage gradientPosition="50% 100%" className="flex-col background h-screen">
       <div className="h-1/12"></div>
       <NavBar />
       <div className="h-full">
@@ -15,14 +18,14 @@ const Landing = () => {
         <Hero />
         <div className="h-1/6"></div>
         <ExpEduComp />
-        <div className="p-10 bg-black"></div>
+        <div className="p-10"></div>
         <Bento />
-        <div className="p-10 bg-black"></div>
+        <div className="p-10 "></div>
         <BlogSection />
         <div className="p-10 bg-zinc-700"></div>
         <Footer />
       </div>
-    </div>
+    </BgImage>
   );
 };
 

@@ -6,6 +6,7 @@ import PortfolioSite from "./pages/PortfolioSite";
 import CurrentlyWorking from "./pages/CurrentlyWorking";
 import Projects from "./pages/projects";
 import ScrollToTop from "./components/ScrollToTop";
+import BlogList from "./pages/BlogList";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           element={<CurrentlyWorking />}
         />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<BlogList />} />
       </Routes>
     </>
   );

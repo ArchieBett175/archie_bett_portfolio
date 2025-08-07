@@ -20,7 +20,7 @@ const NavElement = ({ icon, infoTag, marLeft, dest }) => {
             animate={{ y: "-60%", opacity: 1 }}
             exit={{ y: "0%", opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className={`absolute bg-white rounded-3xl px-3 py-1 font-roboto text-center top-[-20px] ${marLeft}`}
+            className={`absolute bg-white rounded-3xl px-3 py-1 font-roboto text-center top-[-20px] text-gray-950 ${marLeft}`}
           >
             {infoTag}
           </motion.p>

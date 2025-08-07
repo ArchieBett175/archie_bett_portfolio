@@ -3,13 +3,14 @@ import { FiArrowRight } from "react-icons/fi";
 import { motion } from "motion/react";
 import BlogArticle from "./BlogArticle";
 import { useBlog } from "../hooks/useBlog";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const { posts, loading, error } = useBlog();
 
   return (
     <div
-      className="bg-gradient-to-b from-black to-zinc-700 h-f text-zinc-100 flex-col flex text-xl font-medium items-center"
+      className="bg-gradient-to-b from-[#020617] to-zinc-700 h-f text-zinc-100 flex-col flex text-xl font-medium items-center"
       id="blog"
     >
       <div className="flex justify-center w-full " id="blog-header">
@@ -36,17 +37,19 @@ const BlogSection = () => {
               >
                 <h1>Sharing My Thoughts On the Processes</h1>
               </motion.div>
-              <motion.button
-                initial={{ opacity: 0, y: -50 }}
-                whileHover={{ opacity: 90, scale: 1.05 }}
-                transition={{ duration: 0.1, ease: "easeInOut" }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: "all" }}
-                className="cursor-pointer border border-zinc-500 rounded-full md:px-10 px-4 py-3 h-fit place-self-center flex items-center opacity-65"
-              >
-                <div className="">Explore all</div>
-                <FiArrowRight className="ml-5 opacity-65" />
-              </motion.button>
+              <Link to={"/blog"}>
+                <motion.div
+                  initial={{ opacity: 0, y: -50 }}
+                  whileHover={{ opacity: 90, scale: 1.05 }}
+                  transition={{ duration: 0.1, ease: "easeInOut" }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: "all" }}
+                  className="cursor-pointer border border-zinc-500 rounded-full md:px-10 px-4 py-3 h-fit place-self-center flex items-center opacity-65"
+                >
+                  <div className="">Explore all</div>
+                  <FiArrowRight className="ml-5 opacity-65" />
+                </motion.div>
+              </Link>
             </div>
             <motion.h1
               initial={{ opacity: 0, y: -50 }}

@@ -9,6 +9,12 @@
   --color-bg_grey: hsla(250, 64%, 79%, 0.49);
 }
 
+html, body {
+  background-color: #020617;
+  margin: 0;
+  padding: 0;
+}
+
 .background {
   background-color: hsla(0, 0%, 0%, 1);
   background-image: radial-gradient(
@@ -16,10 +22,10 @@
       hsla(357, 77%, 71%, 0.5) 0px,
       transparent 50%
     ),
-    radial-gradient(at 92% 4%, hsla(235, 89%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 90% 2%, hsla(326, 73%, 70%, 1) 0px, transparent 50%),
-    radial-gradient(at 62% 0%, hsla(250, 64%, 79%, 0.49) 0px, transparent 50%),
-    radial-gradient(at 15% 0%, rgb(252, 54, 219) 0px, transparent 50%);
+    radial-gradient(at 92% 4%, #959df9 0px, transparent 50%),
+    radial-gradient(at 90% 2%, #ea7bba 0px, transparent 50%),
+    radial-gradient(at 62% 0%, rgb(179, 167, 236, 0.49) 0px, transparent 50%),
+    radial-gradient(at 15% 0%, #fc36db 0px, transparent 50%);
 }
 
 .background_two {

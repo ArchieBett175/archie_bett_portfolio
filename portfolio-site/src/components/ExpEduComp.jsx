@@ -135,7 +135,7 @@ const ExpEduComp = () => {
   }, []);
 
   return (
-    <div className="text-white flex justify-center h-200 bg-black">
+    <div className="text-white flex justify-center h-200 ">
       {/* background */}
       <motion.div
         initial={{ width: "150%", borderRadius: "0rem" }}
@@ -143,7 +143,7 @@ const ExpEduComp = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className="h-15/16 md:w-3/4 w-10/11 flex-col place-items-center
-          rounded-[3rem] bg-gradient-to-b bg-black"
+          rounded-[3rem] "
         id="experience"
       >
         <SwitchButton isSelected={selected} onToggle={setSelected} />

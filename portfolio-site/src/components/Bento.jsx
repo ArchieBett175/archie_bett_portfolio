@@ -12,7 +12,7 @@ import {
 
 const Bento = () => {
   return (
-    <div className="min-h-screen bg-black px-5 py-12 text-zinc-50">
+    <div className="min-h-screen  px-5 py-12 text-zinc-50">
       <motion.div
         variants={{
           initial: {

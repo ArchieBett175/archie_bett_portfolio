@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import Carousel from "../components/Carousel";
 import ImageCarouselItem from "../components/ImageCarouselItem";
 import ConnectButton from "../components/ConnectButton";
+import BgImage from "../components/BgImage";
 
 const cccShots = [
   {
@@ -66,10 +67,16 @@ const cccShots = [
 const CodeCaffineCollapse = () => {
   return (
     <>
-      <div className="bg-black h-fit w-full background_three justify-center flex">
+      <BgImage
+        gradientPosition="50% 100%"
+        baseColorVal="90%"
+        className="flex justify-center"
+      >
         <Link to={"/projects"} className=" absolute left-0 top-0">
           <motion.div
-            initial={{ scale: 1, color: "#9f9f9f" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.4 }}
             whileHover={{ scale: 1.1, color: "#ffffff" }}
             className="text-4xl text-zinc-200 p-10 flex gap-2"
           >
@@ -77,7 +84,12 @@ const CodeCaffineCollapse = () => {
             <h1 className="mt-0.5 text-2xl">Back To Projects</h1>
           </motion.div>
         </Link>
-        <div className="md:w-3/5 w-full flex flex-col  mt-30 text-zinc-100 gap-15 mx-10 md:mx-0 mb-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="md:w-3/5 w-full flex flex-col  mt-30 text-zinc-100 gap-15 mx-10 md:mx-0 mb-10"
+        >
           <h1 className="text-2xl text-zinc-300 font-bold">
             2023 - First Class Grade Received
           </h1>
@@ -138,7 +150,7 @@ const CodeCaffineCollapse = () => {
               src="https://www.youtube.com/embed/D8WNLURRhTY"
               frameborder="4"
               width="720"
-              height="360"
+              height="480"
               className="mx-auto my-10"
               loading="eager"
             />
@@ -223,8 +235,8 @@ const CodeCaffineCollapse = () => {
               <Link to={"/"}> here</Link>
             </span>
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </BgImage>
       <Footer />
     </>
   );

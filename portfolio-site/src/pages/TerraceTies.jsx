@@ -8,6 +8,7 @@ import ConnectButton from "../components/ConnectButton";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { FiArrowLeft } from "react-icons/fi";
+import BgImage from "../components/BgImage";
 
 const oldImages = [
   {
@@ -119,14 +120,19 @@ const newImages = [
   },
 ];
 
-
 const TerraceTies = () => {
   return (
     <>
-      <div className="bg-black h-fit w-full background_three justify-center flex">
+      <BgImage
+        gradientPosition="50% 100%"
+        baseColorVal="90%"
+        className="flex justify-center"
+      >
         <Link to={"/projects"} className=" absolute left-0 top-0">
           <motion.div
-            initial={{ scale: 1, color: "#9f9f9f" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.4 }}
             whileHover={{ scale: 1.1, color: "#ffffff" }}
             className="text-4xl text-zinc-200 p-10 flex gap-2"
           >
@@ -134,7 +140,12 @@ const TerraceTies = () => {
             <h1 className="mt-0.5 text-2xl">Back To Projects</h1>
           </motion.div>
         </Link>
-        <div className="md:w-3/5 w-full flex flex-col  mt-30 text-zinc-100 gap-15 mx-10 md:mx-0 mb-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="md:w-3/5 w-full flex flex-col  mt-30 text-zinc-100 gap-15 mx-10 md:mx-0 mb-10"
+        >
           <h1 className="text-2xl text-zinc-300 font-bold">
             2024 - First Class Grade Received
           </h1>
@@ -336,14 +347,15 @@ const TerraceTies = () => {
           </div>
           <hr />
           <p className="text-lg">
-            Thank you for being so interested in my work, if you would like to contact me you may do so{" "}
+            Thank you for being so interested in my work, if you would like to
+            contact me you may do so{" "}
             <span className="text-blue-500 underline hover:text-amber-300">
               {" "}
               <Link to={"/"}> here</Link>
             </span>{" "}
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </BgImage>
       <Footer />
     </>
   );

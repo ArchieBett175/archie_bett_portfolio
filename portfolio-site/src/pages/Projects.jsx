@@ -4,6 +4,7 @@ import Project from "../components/Project";
 import { FiArrowLeft } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import BgImage from "../components/BgImage";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -31,7 +32,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="h-fit background_two bg-black w-full ">
+      <BgImage gradientPosition="50% 100%" className="h-screen w-full ">
         <div className="w-full items-center flex flex-col gap-10 text-[#9f9f9f]">
           <Link to={"/"} className="place-self-start">
             <motion.div
@@ -65,7 +66,7 @@ const Projects = () => {
 
           <Footer />
         </div>
-      </div>
+      </BgImage>
     </>
   );
 };
